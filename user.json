@@ -1,0 +1,54 @@
+{
+  "cookies": [],
+  "origins": [
+    {
+      "origin": "https://dragonflyadmin-dev.loompavision.com",
+      "localStorage": [
+        {
+          "name": "CognitoIdentityServiceProvider.7i1v6vlla15qec7vf1ofpb6lon.LastAuthUser",
+          "value": "ariful.islam@unidevgo.com"
+        },
+        {
+          "name": "CognitoIdentityServiceProvider.7i1v6vlla15qec7vf1ofpb6lon.ariful.islam@unidevgo.com.idToken",
+          "value": "eyJraWQiOiJNUHpsUkk4a2VvMXJFSkd0Q1VydGZWTlQyQ0dTRXdmRlZDdVJybkRlNk9ZPSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiIxOWU3NTBhOC0xMDE1LTQyNzctYjg2Yy1mNjYyZDczOWNmMzUiLCJjb2duaXRvOmdyb3VwcyI6WyJTdXBlckFkbWluIiwiQWRtaW4iXSwiZW1haWxfdmVyaWZpZWQiOnRydWUsImNvZ25pdG86cHJlZmVycmVkX3JvbGUiOiJhcm46YXdzOmlhbTo6NDk4MzY1MjEzODQ0OnJvbGVcL0NvZ25pdG9BZG1pblJvbGUtYWxvb21wYS1kZXYiLCJjdXN0b206bGFzdE5hbWUiOiJMYXN0IE5hbWUiLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAudXMtZWFzdC0xLmFtYXpvbmF3cy5jb21cL3VzLWVhc3QtMV9GREk3QkJyV2MiLCJjdXN0b206cHJvZmlsZUltYWdlIjoiaHR0cHM6XC9cL2Fsb29tcGEtYXNzZXRzLmltZ2l4Lm5ldFwvY2l0aXplblwvMTllNzUwYTgtMTAxNS00Mjc3LWI4NmMtZjY2MmQ3MzljZjM1XC83NmFkYWY0NS05MmU5LTQ5YTAtOTExMC0yOTUxZGVhODYyZDQucG5nIiwiY29nbml0bzp1c2VybmFtZSI6IjE5ZTc1MGE4LTEwMTUtNDI3Ny1iODZjLWY2NjJkNzM5Y2YzNSIsImNvZ25pdG86cm9sZXMiOlsiYXJuOmF3czppYW06OjQ5ODM2NTIxMzg0NDpyb2xlXC9Db2duaXRvQWRtaW5Sb2xlLWFsb29tcGEtZGV2Il0sImF1ZCI6IjdpMXY2dmxsYTE1cWVjN3ZmMW9mcGI2bG9uIiwiY3VzdG9tOnByb2ZpbGVDb21wbGV0ZSI6InRydWUiLCJldmVudF9pZCI6IjA4ZGU0OGM5LTY1YzAtNDlmOC1hNWNlLWJmZGQwOGI0MWZiMyIsImN1c3RvbTpmaXJzdE5hbWUiOiJGaXJzdCBOYW1lIiwidG9rZW5fdXNlIjoiaWQiLCJhdXRoX3RpbWUiOjE3MDQxNzg3MTgsImV4cCI6MTcwNDE4MjMxOCwiaWF0IjoxNzA0MTc4NzE4LCJlbWFpbCI6ImFyaWZ1bC5pc2xhbUB1bmlkZXZnby5jb20ifQ.LaqoUH-C_h1FG0B2K1fvRYvi_wgsOqO82ZS3AOm9bR-WZkzB_h8UPChzkjJKN72arPGqfPdqIf6_IREXgshGwXtoTctsma8WfH4K8bRLN9yZ5yI9mfZsK3X2YRImu_xaFwmQT0AqFipbQQSETNh-rmocR-jmtV8qWomcSLinqLtEEPVOOK3fvHVSncA_DwJ8s9HB9aHcGBRN_MLmWkQeLC9dd5q29sIsX2R_wgfLlORukCZLWRmoK478W0cIJwpZaQhw0rw5fH9otaYUT1d8dY7E0C17AunZQEzy1OVyBkNXWoacXRxMfl58tHr4Fk2IxM-PMwj7Df-Zqv49Ao7Zlg"
+        },
+        {
+          "name": "persist:hs-beacon-message-dbbabf7a-5f06-424a-9976-4d3d6e654d56",
+          "value": "{\"message\":\"{\\\"name\\\":\\\"\\\",\\\"email\\\":\\\"\\\",\\\"subject\\\":\\\"\\\",\\\"text\\\":\\\"\\\",\\\"attachments\\\":[],\\\"fields\\\":[],\\\"persist\\\":true}\",\"_persist\":\"{\\\"version\\\":-1,\\\"rehydrated\\\":true}\"}"
+        },
+        {
+          "name": "CognitoIdentityServiceProvider.7i1v6vlla15qec7vf1ofpb6lon.ariful.islam@unidevgo.com.accessToken",
+          "value": "eyJraWQiOiJidktIRGlPdXg4NzI3ZCs0anRNd1hlYzRWK1VXZXJIUjNPbzF5ODhseHR3PSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiIxOWU3NTBhOC0xMDE1LTQyNzctYjg2Yy1mNjYyZDczOWNmMzUiLCJjb2duaXRvOmdyb3VwcyI6WyJTdXBlckFkbWluIiwiQWRtaW4iXSwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMS5hbWF6b25hd3MuY29tXC91cy1lYXN0LTFfRkRJN0JCcldjIiwiY2xpZW50X2lkIjoiN2kxdjZ2bGxhMTVxZWM3dmYxb2ZwYjZsb24iLCJldmVudF9pZCI6IjA4ZGU0OGM5LTY1YzAtNDlmOC1hNWNlLWJmZGQwOGI0MWZiMyIsInRva2VuX3VzZSI6ImFjY2VzcyIsInNjb3BlIjoiYXdzLmNvZ25pdG8uc2lnbmluLnVzZXIuYWRtaW4iLCJhdXRoX3RpbWUiOjE3MDQxNzg3MTgsImV4cCI6MTcwNDE4MjMxOCwiaWF0IjoxNzA0MTc4NzE4LCJqdGkiOiIzNmMzZWQwNy01YzIyLTQ0NjUtYWViZC1lZjE2OTNlYWVhZjQiLCJ1c2VybmFtZSI6IjE5ZTc1MGE4LTEwMTUtNDI3Ny1iODZjLWY2NjJkNzM5Y2YzNSJ9.KfTfBOl5jd0IBmfN26Y71TBlXDywDyNGv7E43oURzdUNKKr5hLQr2h4ZKt3QfuGJbNErtrzcw9tQFKVXgvgikdhGGoI3aAaKYFAYrQKPIm-qNOOZVNhOoAYs8_BvICJfsDfsLzBpUOzAynuS-n_kbNu5EjTKn073qxOJIZx4n1RKrjOrrzGggU7nYzHFH9NKwfnv7IEhf5lT4jDyxbYQIJ8YCKf-WX7kfj9VA5Z6LuilLo5UdTc0eBfXtROhYfTU454I-uUtayODOUW1cr_ehY02TYd93ecvJo65FqVRqFNug7pTTsn7OyDyAp1PrMpxNvaz7reqSHRc1-VE5HQBmw"
+        },
+        {
+          "name": "CognitoIdentityServiceProvider.7i1v6vlla15qec7vf1ofpb6lon.ariful.islam@unidevgo.com.refreshToken",
+          "value": "eyJjdHkiOiJKV1QiLCJlbmMiOiJBMjU2R0NNIiwiYWxnIjoiUlNBLU9BRVAifQ.KlFDx4JFT77NWrGVgmIOyVG6ClCAyBnKqH07rULPs47lMOdvy6de-kEdNIU5jhgi7G9Fjy6pm-IxibwT_UKQkct0R3-r2VKbUtT920OIff6PlcQArr1ZFPrimfzwkz-rlx456AoMnoSqmx0R3g-G_3pTCC3Tl1958JgkeQHraKd3UJrjJ-2fL1c_lDgOmWfxcilnFmzsw_oSmiDhAd_Xw4fnISVlri0GraFytLssVGE_wio28XRFtr_Rsu8HW9wDDWhDLbMiWxh9o4fvUdUdLouMmC2GVqtsZtg5xZNkwHKngiTEbEumtRle_Sfh4eAxTR_g8oP0km38VKyDItRerQ.xN0nTJh_WG1c8Mth.uNCVWZm6c4Ya5qE97xLCjYniouPVuUSEe1vJti7twCiwWIdKeJeAv2YtvvleARYXOzkyRFpjvE5_tg1vXK7t6GhdlVHepGuKc415WJuNpP82rFWeCtocjaQZ5pIKuCKIlYnAqDRO3EaL72DnNxHKB1hP61IJm4w-LfN68TEOfrbwHU-OOqX7ctnD7lqr99ZI_oyfPkdW55jZtsWYgZegpV521k1SLV6nXHRHpmNR3wi1QP9w9Ui3LqK8fAscsAuYGHFRQDNEIA_Fr_yROAGaJLfxTMGfTexB-A3PQRqNtW3LVpqynOPM9h000TAkfZnF3chlT4LAV7Dz2RlRFeOM8r_drRY41QZodGAieZIPpqPb16H8UWOdEuim7RlLomWO2IlPJzD-57pbU8mMV4aAcIdCEgQZOX7-U2-aj7z0GSKkScDrOKS_-xacI82mzQ4MP9H9Z9_SSY7VU4uHRbXKB5HUQ6qhilhUJnF9FXJVZfhDBeAZmt2nzduST8rKAcNZMGGfG0J7Dup95fVmqupU09jXixuADDcyP6hEaUzWcM7C62KPwDcLLGRcQi4O4ElOvbVBtkp5JQy78FoGxjto5xq9tPOVuKbq9F35_WzGQpY9adPE8LU7N8X3HIyGd9qfD6_9OCjo0QIv1mn1oJ7o_SNmz--sm7-21oLij_0F8LR3BlEej22b6aEtJxre_tPmZ7pBaAQHxnJuJcU79cnwvOoyKxW15C9v59DFggtqBZsgRsdGEKT84bsfdd6y_DbwRyFxsmutn98UQxzYcFCmXImmyiCWi0csk18ddVtWkpuk76yUwRkAMHEw_GY7_Ua7VmLttLM8E-FI25P5aYE9SpzXFO-qekV5C9FBVwlGyu0icV1Ff_HH9VdWSC6y-PTqhUhMMZ80dnG-PYPp9uMKe_ntAGKeXeXwqGfNPXt6JJpYbwzF_BUAXPOHzdT0KB7dXKKov36OeFTQ0Nm9FSjg-MVh4A_HthxgdDxawBbzLU4aV7nBK1JYcFdwVJp2xcbEvXNc6v-lWREmmV-vv1tZFAZx_rd5gr-USscZnyJ8cYWC-srB3DTRmgmpJh8X2eolIRY3Pzb73MsSdfrMxjkIaVIGgU70a-hE-AHRQ1NbHkPzGvArtxQfpWyfxF2gsTtf6xeJ_4-cjuM3K1zJZOI322vuuypKDeMqxG_zTjxpyPticqHqtlP2bomEyw1p5qvyUZ-1TmFtuaKmiyR7nhW_1EZoSh0y5O2wpFWB72gqlMtT_iZTR_htUwsTXE_Vblq7akXUSzvUrSIs3I9IeEPQn8nv7wegG_1oqAS9wVxgneGDyov7Y-_EHMOh3g.qmW0ibwyhqE-E015mPt8eA"
+        },
+        {
+          "name": "amplify-signin-with-hostedUI",
+          "value": "false"
+        },
+        {
+          "name": "authorization",
+          "value": "eyJraWQiOiJidktIRGlPdXg4NzI3ZCs0anRNd1hlYzRWK1VXZXJIUjNPbzF5ODhseHR3PSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiIxOWU3NTBhOC0xMDE1LTQyNzctYjg2Yy1mNjYyZDczOWNmMzUiLCJjb2duaXRvOmdyb3VwcyI6WyJTdXBlckFkbWluIiwiQWRtaW4iXSwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMS5hbWF6b25hd3MuY29tXC91cy1lYXN0LTFfRkRJN0JCcldjIiwiY2xpZW50X2lkIjoiN2kxdjZ2bGxhMTVxZWM3dmYxb2ZwYjZsb24iLCJldmVudF9pZCI6IjA4ZGU0OGM5LTY1YzAtNDlmOC1hNWNlLWJmZGQwOGI0MWZiMyIsInRva2VuX3VzZSI6ImFjY2VzcyIsInNjb3BlIjoiYXdzLmNvZ25pdG8uc2lnbmluLnVzZXIuYWRtaW4iLCJhdXRoX3RpbWUiOjE3MDQxNzg3MTgsImV4cCI6MTcwNDE4MjMxOCwiaWF0IjoxNzA0MTc4NzE4LCJqdGkiOiIzNmMzZWQwNy01YzIyLTQ0NjUtYWViZC1lZjE2OTNlYWVhZjQiLCJ1c2VybmFtZSI6IjE5ZTc1MGE4LTEwMTUtNDI3Ny1iODZjLWY2NjJkNzM5Y2YzNSJ9.KfTfBOl5jd0IBmfN26Y71TBlXDywDyNGv7E43oURzdUNKKr5hLQr2h4ZKt3QfuGJbNErtrzcw9tQFKVXgvgikdhGGoI3aAaKYFAYrQKPIm-qNOOZVNhOoAYs8_BvICJfsDfsLzBpUOzAynuS-n_kbNu5EjTKn073qxOJIZx4n1RKrjOrrzGggU7nYzHFH9NKwfnv7IEhf5lT4jDyxbYQIJ8YCKf-WX7kfj9VA5Z6LuilLo5UdTc0eBfXtROhYfTU454I-uUtayODOUW1cr_ehY02TYd93ecvJo65FqVRqFNug7pTTsn7OyDyAp1PrMpxNvaz7reqSHRc1-VE5HQBmw"
+        },
+        {
+          "name": "graphqlEndpoint",
+          "value": "https://wow56nxwxferpak3blxjpi7utq.appsync-api.us-east-1.amazonaws.com/graphql"
+        },
+        {
+          "name": "CognitoIdentityServiceProvider.7i1v6vlla15qec7vf1ofpb6lon.ariful.islam@unidevgo.com.userData",
+          "value": "{\"UserAttributes\":[{\"Name\":\"sub\",\"Value\":\"19e750a8-1015-4277-b86c-f662d739cf35\"},{\"Name\":\"custom:profileComplete\",\"Value\":\"true\"},{\"Name\":\"email_verified\",\"Value\":\"true\"},{\"Name\":\"custom:firstName\",\"Value\":\"First Name\"},{\"Name\":\"custom:lastName\",\"Value\":\"Last Name\"},{\"Name\":\"custom:profileImage\",\"Value\":\"https://aloompa-assets.imgix.net/citizen/19e750a8-1015-4277-b86c-f662d739cf35/76adaf45-92e9-49a0-9110-2951dea862d4.png\"},{\"Name\":\"email\",\"Value\":\"ariful.islam@unidevgo.com\"}],\"Username\":\"19e750a8-1015-4277-b86c-f662d739cf35\"}"
+        },
+        {
+          "name": "CognitoIdentityServiceProvider.7i1v6vlla15qec7vf1ofpb6lon.ariful.islam@unidevgo.com.clockDrift",
+          "value": "1"
+        },
+        {
+          "name": "persist:hs-beacon-dbbabf7a-5f06-424a-9976-4d3d6e654d56",
+          "value": "{\"chat\":\"{\\\"id\\\":\\\"\\\",\\\"messageBody\\\":\\\"\\\",\\\"persistedMessages\\\":[],\\\"state\\\":\\\"CHAT_STATE_EMPTY\\\",\\\"subject\\\":\\\"\\\"}\",\"docs\":\"{\\\"article\\\":{\\\"data\\\":null,\\\"payload\\\":null,\\\"isLoading\\\":false,\\\"isError\\\":false},\\\"beaconIsOpened\\\":false,\\\"openedArticles\\\":[]}\",\"messages\":\"{\\\"shownMessages\\\":[\\\"f14b3983-1c05-45ba-a634-dbdba018820c\\\"],\\\"staticConditionsState\\\":{\\\"pageViews\\\":2,\\\"repeatPageViews\\\":[{\\\"url\\\":\\\"https://dragonflyadmin-dev.loompavision.com/#/apps/792353d2-b992-4760-85a9-09570f1fc77c/0b6fcffd-e117-43dd-8403-28688baa5ff7\\\",\\\"count\\\":1},{\\\"url\\\":\\\"https://dragonflyadmin-dev.loompavision.com/#/apps/792353d2-b992-4760-85a9-09570f1fc77c/0b6fcffd-e117-43dd-8403-28688baa5ff7/live-order\\\",\\\"count\\\":1}]},\\\"syncedCustomerHash\\\":null,\\\"lastSyncTimestamp\\\":null,\\\"shownMessagesTimestamps\\\":{\\\"f14b3983-1c05-45ba-a634-dbdba018820c\\\":1704178730296}}\",\"status\":\"{\\\"hasShownFabAnimation\\\":true}\",\"user\":\"{\\\"email\\\":\\\"\\\",\\\"name\\\":\\\"\\\",\\\"signature\\\":\\\"\\\",\\\"identified\\\":false}\",\"auth\":\"{\\\"deviceId\\\":\\\"8645bc49-b1df-4313-b7db-caae04738ed8\\\",\\\"jwt\\\":\\\"\\\"}\",\"stats\":\"{}\",\"timeline\":\"{\\\"activity\\\":[{\\\"type\\\":\\\"page-viewed\\\",\\\"timestamp\\\":\\\"2024-01-02T06:58:46.517Z\\\",\\\"url\\\":\\\"https://dragonflyadmin-dev.loompavision.com/#/apps/792353d2-b992-4760-85a9-09570f1fc77c/0b6fcffd-e117-43dd-8403-28688baa5ff7\\\",\\\"title\\\":\\\"| Aloompa\\\"},{\\\"type\\\":\\\"page-viewed\\\",\\\"timestamp\\\":\\\"2024-01-02T06:58:47.295Z\\\",\\\"url\\\":\\\"https://dragonflyadmin-dev.loompavision.com/#/apps/792353d2-b992-4760-85a9-09570f1fc77c/0b6fcffd-e117-43dd-8403-28688baa5ff7/live-order\\\",\\\"title\\\":\\\"| Aloompa\\\"}]}\",\"_persist\":\"{\\\"version\\\":0,\\\"rehydrated\\\":true}\"}"
+        }
+      ]
+    }
+  ]
+}
