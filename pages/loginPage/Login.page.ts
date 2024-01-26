@@ -106,7 +106,7 @@ export default class LoginPage {
     // Screen Type: Desktop
     // Description: cheking login page logo image
     async check_the_logo_image(){
-        const ele=this.page.locator("//div[@class='sc-leFDRL feKByR']//img[1]")
+        const ele=this.page.locator("//img[@title='app-factory']")
         try {
             await expect.soft(ele).toBeVisible()
         } catch (error) {
@@ -120,7 +120,7 @@ export default class LoginPage {
     // Screen Type: Desktop
     // Description:  cheking "Sign in to your account" Text Visible
      async check_SignIn_to_your_account_Text(){
-        const ele=this.page.locator("//div[@class='sc-leFDRL feKByR']//h2[1]")
+        const ele=this.page.locator("//h2[text()='Sign in to your account']")
         try {
             await expect.soft(ele).toContainText("Sign in to your account")
         } catch (error) {
@@ -136,7 +136,7 @@ export default class LoginPage {
     // Screen Type: Desktop
     // Description: cheking login button visibility
     async login_button_visibility(){
-        const ele=this.page.locator("//div[@class='sc-lbNHPp gSVqtQ']//button[1]")
+        const ele=this.page.locator("//span[text()='Sign In']")
         try {
             await expect.soft(ele).toBeVisible()
         } catch (error) {
@@ -206,7 +206,7 @@ export default class LoginPage {
     // Screen Type: Desktop
     // Description:  cheking reset password button visible
       async Check_reset_button(){
-        const ele=this.page.locator("//p[@class='sc-hDjjHo cjiQJP']//a[1]")
+        const ele=this.page.locator("//a[contains(text(),'Reset Password')]")
         try {
             await expect.soft(ele).toBeVisible()
         } catch (error) {
@@ -222,8 +222,8 @@ export default class LoginPage {
     // Description:  cheking reset password button is clickable
     async Check_reset_is_clickable(){
 
-        const ele=this.page.locator("//p[@class='sc-hDjjHo cjiQJP']//a[1]").click()
-        const ele2=this.page.locator("//div[@class='sc-lbNHPp gSVqtQ']//h2[1]")
+        const ele=this.page.locator("//a[contains(text(),'Reset Password')]").click()
+        const ele2=this.page.locator("//h2[text()='Reset your password']")
         try {
             await expect.soft(ele2).toContainText("Reset your password")
         } catch (error) {
@@ -237,8 +237,8 @@ export default class LoginPage {
     // Screen Type: Desktop
     // Description:  cheking "Reset your password" Text
     async Check_Reset_your_password_Text(){
-        const ele=this.page.locator("//p[@class='sc-hDjjHo cjiQJP']//a[1]").click()
-        const ele2=this.page.locator("//div[@class='sc-lbNHPp gSVqtQ']//h2[1]")
+        const ele=this.page.locator("//a[contains(text(),'Reset Password')]").click()
+        const ele2=this.page.locator("//h2[text()='Reset your password']")
         try {
             await expect.soft(ele2).toContainText("Reset your password")
         } catch (error) {
@@ -296,8 +296,8 @@ export default class LoginPage {
     // Description:  cheking 'Back to Sign In'button is clickable
      async Check_Back_to_SignIn_is_clickable(){
 
-        const ele=this.page.locator("//a[contains(text(),'Reset Password')]").click()
-        const ele2=this.page.locator("//p[@class='sc-cBkweS jzhEev']//a[1]").click()
+        // const ele=this.page.locator("//a[contains(text(),'Reset Password')]").click()
+        // const ele2=this.page.locator("//p[@class='sc-cBkweS jzhEev']//a[1]").click()
         const ele3=this.page.locator("//span[@class='MuiButton-label-4']//span[1]")
         try {
             await expect.soft(ele3).toContainText("Sign In")

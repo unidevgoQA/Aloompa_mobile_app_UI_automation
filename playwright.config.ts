@@ -7,14 +7,14 @@ const config: PlaywrightTestConfig = {
   // testDir: './tests',
   testMatch: [
     "001Login.test.ts",
-    "002LiveOrder&reservations.test.ts",
-    "003EventDashboard.test.ts",
-    "004Settings.test.ts",
-    "005Ticketing.test.ts",
-    "006ManageEvent.test.ts",
-    "007AttendeeInformation.test.ts",
-    "009Design.test.ts",
-    "011AccountManagement.test.ts",
+    "002Design(Beta).test.ts",
+    "003Design.test.ts",
+    "004Screen.test.ts",
+    "005EventData.test.ts",
+    "006Messaging.test.ts",
+    "007AppStore.test.ts",
+    "008Settings.test.ts",
+    
   ],
   timeout: 1 * 30 * 10000,
   expect: {

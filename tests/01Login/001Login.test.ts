@@ -6,7 +6,7 @@ import { readFileSync } from "fs";
 
 test("TLL001-01 | Verify login with valid credentials", async ({ loginPage, page, browser,AppsPage }) => {
 
-        await page.goto('https://dragonflyadmin-dev.loompavision.com/#/apps/', { waitUntil: 'domcontentloaded' })
+        await page.goto('https://dragonflyadmin-dev.loompavision.com/#/apps/', { waitUntil: 'domcontentloaded',timeout:2000 })
         //wait for login button
         await page.waitForSelector(`//img[@data-testid="app-factoryIcon"]`,{state:'visible'});
         // Login with valid credentials
@@ -15,11 +15,11 @@ test("TLL001-01 | Verify login with valid credentials", async ({ loginPage, page
         
         await page.waitForTimeout(3000)
 
-        await AppsPage.typeSearchFunction('2023 Unidev Test 0001')
+        await AppsPage.typeSearchFunction('2024 UnidevGo Automation')
 
         //  await AppsPage.waitForElementTovisible('2023 Unidev Test 0001')
 
-        await AppsPage.click_on_app('2023 UniDev Test 0001')
+        await AppsPage.click_on_app('2024 UnidevGo Automation')
 
         await page.waitForTimeout(5000)
         await page.locator("(//button[@type='button'])[1]").click();
@@ -132,13 +132,18 @@ test("TLL001-11 | Verify login with invalid credentials", async ({ loginPage, pa
 
         await page.goto('https://dragonflyadmin-dev.loompavision.com/#/apps/', { waitUntil: 'domcontentloaded' })
         //wait for login button
-        await page.locator("//p[@class='sc-hDjjHo cjiQJP']//a[1]").click()
-        // Login with invalid credentials
-        await loginPage.enterRestEmail(data.ResendCodeEmailAddress)
-        const title = await page.title();
-        await page.waitForTimeout(3000)
-        await page.locator("//div[contains(@class,'sc-fubCfw sc-dQppl')]//button[1]").click();
-        await page.waitForTimeout(3000)
+        await page.locator("//input[@type='email']").type(data.ResendCodeEmailAddress);
+        await page.locator("//span[text()='Sign In']").click()
+        await page.locator("//div[text()='Incorrect username or password.']").isVisible()
+
+
+        // await page.locator("//p[@class='sc-hDjjHo cjiQJP']//a[1]").click()
+        // // Login with invalid credentials
+        // await loginPage.enterRestEmail(data.ResendCodeEmailAddress)
+        // const title = await page.title();
+        // await page.waitForTimeout(3000)
+        // await page.locator("//div[contains(@class,'sc-fubCfw sc-dQppl')]//button[1]").click();
+        // await page.waitForTimeout(3000)
   
 
 

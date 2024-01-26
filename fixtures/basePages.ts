@@ -1,17 +1,16 @@
 import LoginPage from "@pages/Login.page";
 import AppsPage from "@pages/Apps.page";
-import ReservationPage from "@pages/Reservations.page";
-import EventdashboardPage from "@pages/Event_dash_board.page";
-import MangeEventPage from "@pages/ManageEvent.page";
 import { test as baseTest } from "@playwright/test";
 import functions from "@helper-function/functions";
 import BaseFunctions from "@base-function/baseFunctions";
 import testData from "@testData/testData"
-import AttendeeInformationPage from "@pages/AttendeeInformation.page";
-import AccountManagement from "@pages/AccountManagement.page";
-import SettingsPage from "@pages/Settings.page";
-import TicketingPage from "@pages/Tcketing.page";
 import Design from "@pages/Design.page";
+import Design_Beta from "@pages/Design_Beta";
+import EventData from "@pages/EventData.page";
+import AppStore from "@pages/AppStore.page";
+import Messaging from "@pages/Messaging";
+import Settings from "@pages/Settings.page";
+import Screen from "@pages/Screen.page";
 
 
 const test = baseTest.extend<{
@@ -20,14 +19,14 @@ const test = baseTest.extend<{
     testData: testData;
     BaseFunctions: BaseFunctions;
     AppsPage:AppsPage;
-    ReservationPage:ReservationPage;
-    EventdashboardPage:EventdashboardPage;
-    ManageEventPage:MangeEventPage;
-    AttendeeInformationPage:AttendeeInformationPage;
-    AccountManagement: AccountManagement;
-    SettingsPage:SettingsPage;
-    TicketingPage: TicketingPage;
+    Design_Beta:Design_Beta;
+    EventData:EventData;
     Design:Design;
+    AppStore:AppStore;
+    Messaging: Messaging;
+    Settings:Settings;
+    Screen: Screen;
+    
 }>({
     functions: async ({ page }, use) => {
         await use(new functions(page));
@@ -44,36 +43,32 @@ const test = baseTest.extend<{
     AppsPage: async ({ page }, use) => {
         await use(new AppsPage(page));
     },
-    ReservationPage: async ({ page }, use) => {
-        await use(new ReservationPage(page));
-    },
-    EventdashboardPage: 
-    async ({ page }, use) => {
-        await use(new EventdashboardPage(page));
-    },
-    ManageEventPage:
-    async ({ page }, use) => {
-        await use(new MangeEventPage(page));
-    },
-    AttendeeInformationPage:
-    async ({ page }, use) => {
-        await use(new AttendeeInformationPage(page));
-    },
-    AccountManagement:
-    async ({ page }, use) => {
-        await use(new AccountManagement(page));
-    },
-    SettingsPage: 
-    async ({ page }, use) => {
-        await use(new SettingsPage(page));
-    },
-    TicketingPage:
-    async ({ page }, use) => {
-        await use(new TicketingPage(page));
+    Design_Beta: async ({ page }, use) => {
+        await use(new Design_Beta(page));
     },
     Design: 
     async ({ page }, use) => {
         await use(new Design(page));
+    },
+    Screen:
+    async ({ page }, use) => {
+        await use(new Screen(page));
+    },
+    EventData:
+    async ({ page }, use) => {
+        await use(new EventData(page));
+    },
+    AppStore:
+    async ({ page }, use) => {
+        await use(new AppStore(page));
+    },
+    Messaging: 
+    async ({ page }, use) => {
+        await use(new Messaging(page));
+    },
+    Settings:
+    async ({ page }, use) => {
+        await use(new Settings(page));
     }
 
 })
