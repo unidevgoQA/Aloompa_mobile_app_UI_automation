@@ -396,7 +396,83 @@ test("Aloompa-MobileApp-TC-006_Event_Data_Places_006 | Validate create a new gro
 
     
 })
-test.skip("Aloompa-MobileApp-TC-007_Event_Data_Places_007 |validate all text input fields in 'Include this place on a map' ", async ({ EventData,page, AppsPage }) => {
+test("Aloompa-MobileApp-TC-007_Event_Data_Places_007 |validate all text input fields in 'Include this place on a map' ", async ({ EventData,page, AppsPage }) => {
+
+    await test.step('Navigate to apps directory', async() =>{ 
+        await page.goto('#/apps/b19541b3-6e40-4442-a5d9-c3c8bcfc6325/3d27b311-49c1-4173-8168-c1381dbf97b7',{waitUntil:"domcontentloaded"})
+        
+    })
+    
+    await test.step('click on EventData button', async() =>{ 
+        await EventData.click_EventData()
+    })
+    await test.step('click on Places button', async() =>{ 
+        await EventData.click_Places()
+    })
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.Click_New_Places()
+    })
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.Place_Name('Place Name')
+    })
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.Include_this_place_on_a_map()
+    })
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.Click_address()
+    })
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.Type_Address("Dhaka")
+    })
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.Click_Cordinates()
+    })
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.type_cordinates_Lati("20.32165")
+    }) 
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.type_cordinates_Long("30.3216")
+    })
+
+    
+})
+test("Aloompa-MobileApp-TC-008_Event_Data_Places_008 | select Category for Map and  primary Map ", async ({ EventData,page, AppsPage }) => {
+
+    await test.step('Navigate to apps directory', async() =>{ 
+        await page.goto('#/apps/b19541b3-6e40-4442-a5d9-c3c8bcfc6325/3d27b311-49c1-4173-8168-c1381dbf97b7',{waitUntil:"domcontentloaded"})
+        
+    })
+    await test.step('click on EventData button', async() =>{ 
+        await EventData.click_EventData()
+    })
+    await test.step('click on Places button', async() =>{ 
+        await EventData.click_Places()
+    })
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.Click_New_Places()
+    })
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.Include_this_place_on_a_map()
+    })
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.Click_address()
+    })
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.Click_Category_for_map()
+    })
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.Click_Category_item()
+    })
+
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.Click_Primary_map()
+    })
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.Click_Primary_map_item()
+    })
+    
+})
+test("Aloompa-MobileApp-TC-009_Event_Data_Places_009 | select Category for Map and  primary Map ", async ({ EventData,page, AppsPage }) => {
 
     await test.step('Navigate to apps directory', async() =>{ 
         await page.goto('#/apps/b19541b3-6e40-4442-a5d9-c3c8bcfc6325/3d27b311-49c1-4173-8168-c1381dbf97b7',{waitUntil:"domcontentloaded"})
@@ -412,41 +488,21 @@ test.skip("Aloompa-MobileApp-TC-007_Event_Data_Places_007 |validate all text inp
     await test.step('click on import csv button ', async() =>{ 
         await EventData.Click_New_Places()
     })
-
-    // not available now
-    
-
-
-    
-})
-test.skip("Aloompa-MobileApp-TC-008_Event_Data_Places_008 | select primary Map ", async ({ EventData,page, AppsPage }) => {
-
-    await test.step('Navigate to apps directory', async() =>{ 
-        await page.goto('#/apps/b19541b3-6e40-4442-a5d9-c3c8bcfc6325/3d27b311-49c1-4173-8168-c1381dbf97b7',{waitUntil:"domcontentloaded"})
-        
-    })
-
-    await test.step('click on EventData button', async() =>{ 
-        await EventData.click_EventData()
-    })
-    await test.step('click on Places button', async() =>{ 
-        await EventData.click_Places()
+    await test.step('file_uploader_for_splash_page_logo_file', async() =>{ 
+        await EventData.file_uploader_for_image_file('banner.png')
+        await page.waitForTimeout(3000)   
     })
     await test.step('click on import csv button ', async() =>{ 
-        await EventData.Click_New_Places()
+        await EventData.Click_Remove_Image()
     })
-
-    // not available now
     
-
-
     
 })
 
 
 
 
-//12/01/2024
+//02/02/2024
 })
 
 
