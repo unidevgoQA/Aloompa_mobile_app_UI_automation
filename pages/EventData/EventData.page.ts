@@ -67,7 +67,19 @@ export default class EventData {
         User_Group_Name:"//input[@placeholder='New User Group']",
         Click_User_Group:"//a[@title='User Groups']",
         Click_Delete_User_Group_btn:"//p[text()='Delete User Group']",
-        Click_final_Delete_User_Group_btn:"//span[text()='Yes']"
+        Click_final_Delete_User_Group_btn:"//span[text()='Yes']",
+        Include_this_place_on_a_map:"(//input[@type='checkbox'])[2]",
+        Click_address:"(//input[@type='radio'])[1]",
+        Type_Address:"//input[@placeholder='Enter an address...']",
+        Click_Cordinates:"(//input[@type='radio'])[2]",
+        type_cordinates_Lati:"(//input[@type='number'])[1]",
+        type_cordinates_Long:"(//input[@type='number'])[2]",
+        Click_Category_for_map:"(//div[@role='button'])[1]",
+        Click_Category_item:"//p[text()='Places of Interest']",
+        Click_Primary_map:"(//div[@role='button'])[2]",
+        Click_Primary_map_item:"//p[text()='Map 001 (Do not delete)']",
+        image_btn:"(//span[text()='Click here']/following::input)[1]",
+        Click_Remove_Image:"//span[text()='Remove Image']",
 
 
 
@@ -109,6 +121,150 @@ export default class EventData {
     // Feature Name: LiveOrder&reservations
     // Screen Type: Desktop
     // Description: Clicking on top left "Reservations" icon
+    async Click_Category_for_map(){
+      const ele = this.page.locator(this.Event_Data_Elements.Click_Category_for_map)
+      try {
+          await ele.click()
+      } catch (error) {
+          throw new Error('Aloompa|admin | Apps directory |  first app name element not found, click failed|  Error occured: '+error)       
+      }
+  }
+
+  // Module Name: Aloompa | Admin
+    // Feature Name: LiveOrder&reservations
+    // Screen Type: Desktop
+    // Description: Clicking on top left "Reservations" icon
+    async Click_Category_item(){
+      const ele = this.page.locator(this.Event_Data_Elements.Click_Category_item)
+      try {
+          await ele.click()
+      } catch (error) {
+          throw new Error('Aloompa|admin | Apps directory |  first app name element not found, click failed|  Error occured: '+error)       
+      }
+  }
+
+  // Module Name: Aloompa | Admin
+    // Feature Name: LiveOrder&reservations
+    // Screen Type: Desktop
+    // Description: Clicking on top left "Reservations" icon
+    async Click_Primary_map(){
+      const ele = this.page.locator(this.Event_Data_Elements.Click_Primary_map)
+      try {
+          await ele.click()
+      } catch (error) {
+          throw new Error('Aloompa|admin | Apps directory |  first app name element not found, click failed|  Error occured: '+error)       
+      }
+  }
+
+  // Module Name: Aloompa | Admin
+    // Feature Name: LiveOrder&reservations
+    // Screen Type: Desktop
+    // Description: Clicking on top left "Reservations" icon
+    async Click_Primary_map_item(){
+      const ele = this.page.locator(this.Event_Data_Elements.Click_Primary_map_item)
+      try {
+          await ele.click()
+      } catch (error) {
+          throw new Error('Aloompa|admin | Apps directory |  first app name element not found, click failed|  Error occured: '+error)       
+      }
+  }
+
+    // Module Name: Aloompa | Admin
+    // Feature Name: LiveOrder&reservations
+    // Screen Type: Desktop
+    // Description: Clicking on top left "Reservations" icon
+    async Click_address(){
+      const ele = this.page.locator(this.Event_Data_Elements.Click_address)
+      try {
+          await ele.click()
+      } catch (error) {
+          throw new Error('Aloompa|admin | Apps directory |  first app name element not found, click failed|  Error occured: '+error)       
+      }
+  }
+
+  // Module Name: Aloompa | Admin
+    // Feature Name: LiveOrder&reservations
+    // Screen Type: Desktop
+    // Description: Clicking on top left "Reservations" icon
+    async Type_Address(value:string){
+      const ele = this.page.locator(this.Event_Data_Elements.Type_Address)
+      try {
+          await ele.fill(value)
+      } catch (error) {
+          throw new Error('Aloompa|admin | Apps directory |  first app name element not found, click failed|  Error occured: '+error)       
+      }
+  }
+
+
+  // Module Name: Aloompa | Admin
+    // Feature Name: LiveOrder&reservations
+    // Screen Type: Desktop
+    // Description: Clicking on top left "Reservations" icon
+    async Click_Cordinates(){
+      const ele = this.page.locator(this.Event_Data_Elements.Click_Cordinates)
+      try {
+          await ele.click()
+      } catch (error) {
+          throw new Error('Aloompa|admin | Apps directory |  first app name element not found, click failed|  Error occured: '+error)       
+      }
+  }
+
+  // Module Name: Aloompa | Admin
+    // Feature Name: LiveOrder&reservations
+    // Screen Type: Desktop
+    // Description: Clicking on top left "Reservations" icon
+    async type_cordinates_Lati(value:string){
+      const ele = this.page.locator(this.Event_Data_Elements.type_cordinates_Lati)
+      try {
+          await ele.fill(value)
+      } catch (error) {
+          throw new Error('Aloompa|admin | Apps directory |  first app name element not found, click failed|  Error occured: '+error)       
+      }
+  }
+
+  // Module Name: Aloompa | Admin
+    // Feature Name: LiveOrder&reservations
+    // Screen Type: Desktop
+    // Description: Clicking on top left "Reservations" icon
+    async type_cordinates_Long(value:string){
+      const ele = this.page.locator(this.Event_Data_Elements.type_cordinates_Long)
+      try {
+          await ele.fill(value)
+      } catch (error) {
+          throw new Error('Aloompa|admin | Apps directory |  first app name element not found, click failed|  Error occured: '+error)       
+      }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // Module Name: Aloompa | Admin
+    // Feature Name: LiveOrder&reservations
+    // Screen Type: Desktop
+    // Description: Clicking on top left "Reservations" icon
     async click_Places(){
         const ele = this.page.locator(this.Event_Data_Elements.Click_Places)
         try {
@@ -124,6 +280,18 @@ export default class EventData {
     // Description: Clicking on top left "Reservations" icon
     async Click_New_Places(){
       const ele = this.page.locator(this.Event_Data_Elements.click_New_Places)
+      try {
+          await ele.click()
+      } catch (error) {
+          throw new Error('Aloompa|admin | Apps directory |  first app name element not found, click failed|  Error occured: '+error)       
+      }
+  }
+  // Module Name: Aloompa | Admin
+    // Feature Name: LiveOrder&reservations
+    // Screen Type: Desktop
+    // Description: Clicking on top left "Reservations" icon
+    async Include_this_place_on_a_map(){
+      const ele = this.page.locator(this.Event_Data_Elements.Include_this_place_on_a_map)
       try {
           await ele.click()
       } catch (error) {
@@ -916,6 +1084,44 @@ export default class EventData {
           await ele.fill(value)
       } catch (error) {
       throw new Error('Aloompa|admin | Reservations | address 1 input  element is missing |  Error occured: '+error)       
+      }
+  }
+
+
+
+  // Module Name: Aloompa | Admin
+    // Feature Name: LiveOrder&reservations
+    // Screen Type: Desktop
+    // Description: file_uploader_for_image_file
+    async file_uploader_for_image_file(value:string) {
+      const filePath0 = `testData/images/${value}`
+      const [fileChooser] = await Promise.all([
+        // It is important to call waitForEvent before click to set up waiting.
+        this.page.waitForEvent('filechooser'),
+        // Opens the file chooser.
+        this.page.locator(this.Event_Data_Elements.image_btn).click()
+        
+      
+      ]);
+      const ele=this.page.locator(this.Event_Data_Elements.image_btn)
+      ele.scrollIntoViewIfNeeded()
+      ele.click()
+      await fileChooser.setFiles([filePath0]);
+      
+      
+    }
+
+
+    // Module Name: Aloompa | Admin
+    // Feature Name: LiveOrder&reservations
+    // Screen Type: Desktop
+    // Description: Clicking on top left "Reservations" icon
+    async Click_Remove_Image(){
+      const ele = this.page.locator(this.Event_Data_Elements.Click_Remove_Image)
+      try {
+          await ele.click()
+      } catch (error) {
+          throw new Error('Aloompa|admin | Apps directory |  first app name element not found, click failed|  Error occured: '+error)       
       }
   }
   
