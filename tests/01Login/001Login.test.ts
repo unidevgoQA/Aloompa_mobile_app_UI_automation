@@ -6,7 +6,7 @@ import { readFileSync } from "fs";
 
 test("TLL001-01 | Verify login with valid credentials", async ({ loginPage, page, browser,AppsPage }) => {
 
-        await page.goto('https://dragonflyadmin-dev.loompavision.com/#/apps/', { waitUntil: 'domcontentloaded',timeout:2000 })
+        await page.goto('https://dragonflyadmin-dev.loompavision.com/#/apps/', { waitUntil: 'domcontentloaded'})
         //wait for login button
         await page.waitForSelector(`//img[@data-testid="app-factoryIcon"]`,{state:'visible'});
         // Login with valid credentials
