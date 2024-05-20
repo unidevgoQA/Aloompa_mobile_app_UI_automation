@@ -55,7 +55,7 @@ export default class EventData {
     X_User_Name: "(//input[@placeholder='profile-name'])[2]",
     Instagram_User_Name: "(//input[@placeholder='profile-name'])[3]",
     SnapChat_User_Name: "(//input[@placeholder='profile-name'])[4]",
-    Youtube_Channel_URL: "(//label[text()='YouTube Channel URL']/following::input)[1]",
+    Youtube_Channel_URL: "(//label[text()='Youtube Channel URL']/following::input)[1]",
     Spotify_URL: "(//label[text()='Spotify URL']/following::input)[1]",
     Spotify_URI: "(//label[text()='Spotify URI']/following::input)[1]",
     Common_Button_Text: "(//label[text()='Common Button Text']/following::input)[1]",
@@ -142,7 +142,7 @@ export default class EventData {
     click_Previous_button: "//span[text()='Previous']",
     Validate_Previous_btn_is_working: "(//a[@title='New Place 001 (Do not delete)']//div)[1]",
     Click_action_btn_for_category:"//a[contains(text(),'Category Name')]//parent::td//following-sibling::td[4]//div/button",
-    Click_action_btn_for_user_group:"//a[@title='User Group Name']//parent::td//following-sibling::td[3]//div/button",
+    Click_action_btn_for_user_group:"//a[@title='Delete User Group']//parent::td//following-sibling::td[3]//div/button",
     Click_action_btn_for_delete_place:`//div[text()="Delete Place"]//parent::a/parent::td/following-sibling::td[4]/div/button`,
 
 
@@ -267,11 +267,11 @@ Click_New_Games:"//a[contains(text(),'+ New Game')]",
 Games_Name:"(//div[contains(@class,'MuiInputBase-root MuiOutlinedInput-root')]//input)[1]",
 Games_Description:"//div[@class='public-DraftStyleDefault-block public-DraftStyleDefault-ltr']",
 Games_Custom_Preview_Text:"(//input[@type='checkbox'])[3]",
-Games_Preview_Text:"(//div[@data-testid='textarea']//div)[1]",
+Games_Preview_Text:"(//textarea[contains(@class,'MuiInputBase-input MuiOutlinedInput-input')])[1]",
 
 Click_Save_Games:"(//span[text()='Save Game'])[2]",
 
-validate_search_functionality_for_Games:"(//div[text()='001 Delete it'])[1]",
+validate_search_functionality_for_Games:"//a[contains(text(),'001 Game Delete it')]",
 Select_category_for_Games_1:"//p[text()='Category validation for Games 001 (Do not Delete)']",
 Validate_Games_category_1_is_Visible:"//a[contains(text(),'New Game (Do not Delete) 001')]",
 Select_category_for_Games_2:"//p[text()='Category validation for Games 002 (Do not Delete)']",
@@ -286,6 +286,47 @@ Select_Timezone_of_Import_Date_Times:"//li[@data-value='Asia/Dhaka']//p[1]",
 Click_Uses_European_Time_Format_for_games:"(//input[@type='checkbox'])[2]",
 Click_Times_are_Unix_Time_Stamps_for_games:"(//input[@type='checkbox'])[1]",
 Click_Unix_Time_Stamps_are_in_Milliseconds_for_games:"(//input[@type='checkbox'])[2]",
+input_Start_Time_Date:"(//input[contains(@class,'MuiInputBase-input MuiOutlinedInput-input')])[2]",
+input_Start_Time_houre:"(//input[contains(@class,'MuiInputBase-input MuiOutlinedInput-input')])[3]",
+Click_Add_A_New_Place:"//span[text()='Add a new place']",
+input_POI_Name:"//input[@placeholder='New POI']",
+Select_A_Category_1:"(//label[text()='Please select a category']/following-sibling::div)[1]",
+Select_A_Category_2:"(//ul[@role='listbox']//li)[2]",
+Select_Save_Category:"//span[text()='Save']",
+Select_A_Place:"(//label[text()='Choose a Place']/following::input)[1]",
+Select_A_Place_2:"(//ul[@role='listbox']//li)[2]",
+is_featured_for_Gmaes:"(//label[text()='Please select a category']/following::input)[2]",
+Check_Common_Button:"(//label[text()='Please select a category']/following::input)[2]",
+Games_Common_Button_Text:"(//input[@class='MuiInputBase-input MuiOutlinedInput-input'])[2]",
+Games_Common_Button_URL:"(//input[@class='MuiInputBase-input MuiOutlinedInput-input'])[3]",
+Check_Common_Button_Deeplink:`[type="checkbox"]`,
+Click_Create_New_Deeplink:"//span[text()='Create a New Deep Link']",
+Click_Select_a_type:"//p[text()='Select a type...']",
+select_native_webview:"//p[text()='Native WebView']",
+fill_deeplink_title:"(//input[@class='MuiInputBase-input MuiOutlinedInput-input'])[3]",
+fill_deeplink_URL:"//input[@placeholder='https://aloompa.com/']",
+Check_Use_Device_Id:`[type="checkbox"]`,
+Click_Save_Deeplink:"//span[text()='Save Deep Link']",
+Click_Select_deep_link:"(//div[@role='button'])[3]",
+Select_deep_link:"//p[text()='A1']",
+Select_deep_link_Edit:"//span[text()='Edit Deep Link']",
+Select_deep_link_Edit_and_cancle:"//button[@data-testid='modal-close-button']",
+Select_deep_link__and_Remove:"//span[text()='Remove Deep Link']",
+Delete_created_deep_link:"//span[text()='Delete Deep Link']",
+Fill_Common_Button_Color_code_for_games:"//input[@placeholder='#000000']",
+Common_Button_Color_code_for_games:"(//div[text()='Common Button Color']/following::input)[1]",
+Select_category_for_games_1:"(//ul[@role='listbox']//li)[3]",
+Validate_games_category_1_is_Visible:"//a[contains(text(),'Category validation for Games 001 (Do not Delete)')]",
+Select_category_for_games_2:"(//ul[@role='listbox']//li)[2]",
+Click_action_btn_1_for_games:"//a[contains(text(),'001 Game Delete it')]//parent::td//following-sibling::td[4]//button",
+input_End_Time_Date:"(//label[text()='End Time']/following::input)[1]",
+input_End_Time_houre:"(//label[text()='End Time']/following::input)[2]",
+
+
+
+
+
+
 
 
 
@@ -304,7 +345,18 @@ Click_Unix_Time_Stamps_are_in_Milliseconds_for_games:"(//input[@type='checkbox']
 
                     //////////////////////////////////////////////////////////////////////////////////////
 
-
+click_Events:"//a[contains(text(),'Events')]",
+Terget_Events:"//p[text()='events']",
+Click_New_Events:"//a[contains(text(),'+ New Event')]",
+Event_Name:"(//input[@class='MuiInputBase-input MuiOutlinedInput-input'])[1]",
+Events_Description:"//div[@class='public-DraftStyleDefault-block public-DraftStyleDefault-ltr']",
+Events_Custom_Preview_Text:"(//input[@type='checkbox'])[1]",
+Events_Preview_Text:"(//label[text()='Preview Text']/following::textarea)[1]",
+status_Message:"(//label[text()='Status Message']/following::input)[1]",
+Event_capacity:"(//label[text()='Event Capacity']/following::input)[1]",
+Check_Start_End_Times_TBD:"(//input[@type='checkbox'])[2]",
+input_End_Time_Date_for_event:"(//label[text()='Start Time']/following::input)[1]",
+input_End_Time_houre_for_event:"(//label[text()='Start Time']/following::input)[2]",
 
 
 
@@ -3807,5 +3859,691 @@ Click_Unix_Time_Stamps_are_in_Milliseconds_for_games:"(//input[@type='checkbox']
   }
 
 
+
+       // Module Name: Aloompa | Admin | Mobile App CMS
+  // Feature Name: Aloompa Mobile App CMS - Event Data
+  // Screen Type: Desktop
+  // Description:
+  async input_Start_Time() {
+    const ele = this.page.locator(this.Event_Data_Elements.input_Start_Time_Date)
+    const ele2 = this.page.locator(this.Event_Data_Elements.input_Start_Time_houre)
+    try {
+      await ele.fill("06/01/2024")
+      await ele2.fill("07:00 AM")
+    } catch (error) {
+      throw new Error('Aloompa | admin | Event Data | Places | "" |  Error occured: ' + error)
+    }
+  }
+
+
+        // Module Name: Aloompa | Admin | Mobile App CMS
+  // Feature Name: Aloompa Mobile App CMS - Event Data
+  // Screen Type: Desktop
+  // Description:
+  async input_End_Time() {
+    const ele = this.page.locator(this.Event_Data_Elements.input_End_Time_Date)
+    const ele2 = this.page.locator(this.Event_Data_Elements.input_End_Time_houre)
+    try {
+      await ele.fill("06/02/2024")
+      await ele2.fill("010:00 AM")
+    } catch (error) {
+      throw new Error('Aloompa | admin | Event Data | Places | "" |  Error occured: ' + error)
+    }
+  }
+
+
+
+  
+      // Module Name: Aloompa | Admin | Mobile App CMS
+  // Feature Name: Aloompa Mobile App CMS - Event Data
+  // Screen Type: Desktop
+  // Description:
+  async Click_Add_A_New_Place() {
+    const ele = this.page.locator(this.Event_Data_Elements.Click_Add_A_New_Place)
+    try {
+      await ele.click()
+    } catch (error) {
+      throw new Error('Aloompa | admin | Event Data | Places | "" |  Error occured: ' + error)
+    }
+  }
+
+
+       // Module Name: Aloompa | Admin | Mobile App CMS
+  // Feature Name: Aloompa Mobile App CMS - Event Data
+  // Screen Type: Desktop
+  // Description:
+  async input_POI_Name(value: string) {
+    const ele = this.page.locator(this.Event_Data_Elements.input_POI_Name)
+    try {
+      await ele.fill(value)
+    } catch (error) {
+      throw new Error('Aloompa | admin | Event Data | Places | "" |  Error occured: ' + error)
+    }
+  }
+
+        // Module Name: Aloompa | Admin | Mobile App CMS
+  // Feature Name: Aloompa Mobile App CMS - Event Data
+  // Screen Type: Desktop
+  // Description:
+  async Select_A_Category() {
+    const ele = this.page.locator(this.Event_Data_Elements.Select_A_Category_1)
+    const ele2 = this.page.locator(this.Event_Data_Elements.Select_A_Category_2)
+    try {
+      await ele.click()
+      await ele2.click()
+      
+
+    } catch (error) {
+      throw new Error('Aloompa | admin | Event Data | Places | "" |  Error occured: ' + error)
+    }
+  }
+
+
+          // Module Name: Aloompa | Admin | Mobile App CMS
+  // Feature Name: Aloompa Mobile App CMS - Event Data
+  // Screen Type: Desktop
+  // Description:
+  async Select_Save_Category() {
+    const ele = this.page.locator(this.Event_Data_Elements.Select_Save_Category)
+    
+    try {
+      await ele.click()
+      
+      
+
+    } catch (error) {
+      throw new Error('Aloompa | admin | Event Data | Places | "" |  Error occured: ' + error)
+    }
+  }
+
+  
+          // Module Name: Aloompa | Admin | Mobile App CMS
+  // Feature Name: Aloompa Mobile App CMS - Event Data
+  // Screen Type: Desktop
+  // Description:
+  async Select_A_Place() {
+    const ele = this.page.locator(this.Event_Data_Elements.Select_A_Place)
+    const ele2 = this.page.locator(this.Event_Data_Elements.Select_A_Place_2)
+    
+    try {
+      await ele.click()
+      await ele2.click()
+      
+      
+
+    } catch (error) {
+      throw new Error('Aloompa | admin | Event Data | Places | "" |  Error occured: ' + error)
+    }
+  }
+
+
+
+
+      // Module Name: Aloompa | Admin | Mobile App CMS
+  // Feature Name: Aloompa Mobile App CMS - Event Data
+  // Screen Type: Desktop
+  // Description:
+  async is_featured_for_Gmaes() {
+    const ele = this.page.locator(this.Event_Data_Elements.is_featured_for_Gmaes)
+    try {
+      await ele.check({
+        force: true
+      })
+    } catch (error) {
+      throw new Error('Aloompa | admin | Event Data | Places | "" |  Error occured: ' + error)
+    }
+  }
+
+
+    // Module Name: Aloompa | Admin | Mobile App CMS
+  // Feature Name: Aloompa Mobile App CMS - Event Data
+  // Screen Type: Desktop
+  // Description:
+  async Check_Common_Button() {
+    const ele = this.page.locator(this.Event_Data_Elements.Check_Common_Button)
+    try {
+      await this.page.waitForTimeout(2000)
+      await ele.check({
+        force: true
+      })
+    } catch (error) {
+      throw new Error('Aloompa | admin | Event Data | Places | "" |  Error occured: ' + error)
+    }
+  }  
+
+         // Module Name: Aloompa | Admin | Mobile App CMS
+  // Feature Name: Aloompa Mobile App CMS - Event Data
+  // Screen Type: Desktop
+  // Description:
+  async Games_Common_Button_Text(value: string) {
+    const ele = this.page.locator(this.Event_Data_Elements.Games_Common_Button_Text)
+    try {
+      await ele.fill(value)
+    } catch (error) {
+      throw new Error('Aloompa | admin | Event Data | Places | "" |  Error occured: ' + error)
+    }
+  }
+
+  
+         // Module Name: Aloompa | Admin | Mobile App CMS
+  // Feature Name: Aloompa Mobile App CMS - Event Data
+  // Screen Type: Desktop
+  // Description:
+  async Games_Common_Button_URL(value: string) {
+    const ele = this.page.locator(this.Event_Data_Elements.Games_Common_Button_URL)
+    try {
+      await ele.fill(value)
+    } catch (error) {
+      throw new Error('Aloompa | admin | Event Data | Places | "" |  Error occured: ' + error)
+    }
+  }
+
+      // Module Name: Aloompa | Admin | Mobile App CMS
+  // Feature Name: Aloompa Mobile App CMS - Event Data
+  // Screen Type: Desktop
+  // Description:
+  async Check_Common_Button_Deeplink() {
+    const ele = this.page.locator(this.Event_Data_Elements.Check_Common_Button_Deeplink).nth(4)
+    try {
+     
+      await ele.check({
+        force: true
+      })
+    } catch (error) {
+      throw new Error('Aloompa | admin | Event Data | Places | "" |  Error occured: ' + error)
+    }
+  }
+
+
+
+  // Module Name: Aloompa | Admin | Mobile App CMS
+  // Feature Name: Aloompa Mobile App CMS - Event Data
+  // Screen Type: Desktop
+  // Description:
+  async Select_deep_link_Edit_and_Remove() {
+    const ele = this.page.locator(this.Event_Data_Elements.Click_Select_deep_link)
+    const ele1 = this.page.locator(this.Event_Data_Elements.Select_deep_link)
+    const ele2 = this.page.locator(this.Event_Data_Elements.Select_deep_link_Edit)
+    const ele3 = this.page.locator(this.Event_Data_Elements.Select_deep_link_Edit_and_cancle)
+    const ele4 = this.page.locator(this.Event_Data_Elements.Select_deep_link__and_Remove)
+    
+    
+    try {
+      await ele.click()
+      await this.page.waitForTimeout(1000)
+      await ele1.click()
+      await this.page.waitForTimeout(1000)
+      await ele2.click()
+      await this.page.waitForTimeout(2000)
+      await ele3.click()
+      await this.page.waitForTimeout(1000)
+      await ele4.click()
+      
+    } catch (error) {
+      throw new Error('Aloompa | admin | Event Data | Places | "" |  Error occured: ' + error)
+    }
+  }
+
+
+
+
+
+       // Module Name: Aloompa | Admin | Mobile App CMS
+  // Feature Name: Aloompa Mobile App CMS - Event Data
+  // Screen Type: Desktop
+  // Description: 
+  async Click_Create_New_Deeplink() {
+    const ele1 = this.page.locator(this.Event_Data_Elements.Click_Create_New_Deeplink)
+    try {
+      await ele1.click()
+  
+
+    } catch (error) {
+      throw new Error('Aloompa | admin | Event Data | Places | "" |  Error occured: ' + error)
+    }
+  }
+
+       // Module Name: Aloompa | Admin | Mobile App CMS
+  // Feature Name: Aloompa Mobile App CMS - Event Data
+  // Screen Type: Desktop
+  // Description: 
+  async Click_Select_a_type() {
+    const ele2 = this.page.locator(this.Event_Data_Elements.Click_Select_a_type)
+    try {
+     
+      await this.page.waitForTimeout(2000)
+      await ele2.click()
+
+    } catch (error) {
+      throw new Error('Aloompa | admin | Event Data | Places | "" |  Error occured: ' + error)
+    }
+  }
+
+       // Module Name: Aloompa | Admin | Mobile App CMS
+  // Feature Name: Aloompa Mobile App CMS - Event Data
+  // Screen Type: Desktop
+  // Description: 
+  async select_native_webview() {
+    const ele3 = this.page.locator(this.Event_Data_Elements.select_native_webview)
+    try {
+
+      await ele3.click()
+
+    } catch (error) {
+      throw new Error('Aloompa | admin | Event Data | Places | "" |  Error occured: ' + error)
+    }
+  }
+
+       // Module Name: Aloompa | Admin | Mobile App CMS
+  // Feature Name: Aloompa Mobile App CMS - Event Data
+  // Screen Type: Desktop
+  // Description: 
+  async fill_deeplink_title() {
+    const ele4 = this.page.locator(this.Event_Data_Elements.fill_deeplink_title)
+    try {
+   
+      await ele4.fill('A1')
+   
+    } catch (error) {
+      throw new Error('Aloompa | admin | Event Data | Places | "" |  Error occured: ' + error)
+    }
+  }
+
+       // Module Name: Aloompa | Admin | Mobile App CMS
+  // Feature Name: Aloompa Mobile App CMS - Event Data
+  // Screen Type: Desktop
+  // Description: 
+  async fill_deeplink_URL() {
+    
+    const ele5 = this.page.locator(this.Event_Data_Elements.fill_deeplink_URL)
+    
+    try {
+     
+      await ele5.fill('https://ariful15.hashnode.dev/')
+    
+
+    } catch (error) {
+      throw new Error('Aloompa | admin | Event Data | Places | "" |  Error occured: ' + error)
+    }
+  }
+
+       // Module Name: Aloompa | Admin | Mobile App CMS
+  // Feature Name: Aloompa Mobile App CMS - Event Data
+  // Screen Type: Desktop
+  // Description: 
+  async Check_Use_Device_Id() {
+    
+    const ele6 = this.page.locator(this.Event_Data_Elements.Check_Use_Device_Id).nth(5)
+   
+    try {
+      
+      await ele6.check({force: true})
+   
+
+    } catch (error) {
+      throw new Error('Aloompa | admin | Event Data | Places | "" |  Error occured: ' + error)
+    }
+  }
+
+  // Module Name: Aloompa | Admin | Mobile App CMS
+  // Feature Name: Aloompa Mobile App CMS - Event Data
+  // Screen Type: Desktop
+  // Description: 
+  async Click_Save_Deeplink() {
+    
+    const ele7 = this.page.locator(this.Event_Data_Elements.Click_Save_Deeplink)
+    try {
+      
+      await ele7.click()
+
+    } catch (error) {
+      throw new Error('Aloompa | admin | Event Data | Places | "" |  Error occured: ' + error)
+    }
+  }
+
+
+
+    // Module Name: Aloompa | Admin | Mobile App CMS
+  // Feature Name: Aloompa Mobile App CMS - Event Data
+  // Screen Type: Desktop
+  // Description:
+  async Click_Select_deep_link() {
+    const ele = this.page.locator(this.Event_Data_Elements.Click_Select_deep_link)
+    try {
+      await ele.click()
+    
+    } catch (error) {
+      throw new Error('Aloompa | admin | Event Data | Places | "" |  Error occured: ' + error)
+    }
+  }
+
+    // Module Name: Aloompa | Admin | Mobile App CMS
+  // Feature Name: Aloompa Mobile App CMS - Event Data
+  // Screen Type: Desktop
+  // Description:
+  async Select_deep_link() {
+    const ele1 = this.page.locator(this.Event_Data_Elements.Select_deep_link).nth(1)
+    try {
+      await ele1.click()
+    } catch (error) {
+      throw new Error('Aloompa | admin | Event Data | Places | "" |  Error occured: ' + error)
+    }
+  }
+
+    // Module Name: Aloompa | Admin | Mobile App CMS
+  // Feature Name: Aloompa Mobile App CMS - Event Data
+  // Screen Type: Desktop
+  // Description:
+  async Select_deep_link_Edit() {
+(this.Event_Data_Elements.Select_deep_link)
+    const ele2 = this.page.locator(this.Event_Data_Elements.Select_deep_link_Edit)
+    try {
+
+      await ele2.click()
+    
+    } catch (error) {
+      throw new Error('Aloompa | admin | Event Data | Places | "" |  Error occured: ' + error)
+    }
+  }
+
+    // Module Name: Aloompa | Admin | Mobile App CMS
+  // Feature Name: Aloompa Mobile App CMS - Event Data
+  // Screen Type: Desktop
+  // Description:
+  async Delete_created_deep_link() {
+    const ele3 = this.page.locator(this.Event_Data_Elements.Delete_created_deep_link)
+    try {
+     
+      await ele3.click()
+      await this.page.waitForTimeout(2000)
+    
+    } catch (error) {
+      throw new Error('Aloompa | admin | Event Data | Places | "" |  Error occured: ' + error)
+    }
+  }
+
+    // Module Name: Aloompa | Admin | Mobile App CMS
+  // Feature Name: Aloompa Mobile App CMS - Event Data
+  // Screen Type: Desktop
+  // Description:  
+  async Fill_Common_Button_Color_code_for_games(value1: string) {
+    const ele = this.page.locator(this.Event_Data_Elements.Fill_Common_Button_Color_code_for_games)
+    try {
+      await ele.fill(value1)
+    } catch (error) {
+      throw new Error('Aloompa | admin | Event Data | Places | "" |  Error occured: ' + error)
+    }
+  }
+
+
+    // Module Name: Aloompa | Admin | Mobile App CMS
+  // Feature Name: Aloompa Mobile App CMS - Event Data
+  // Screen Type: Desktop
+  // Description: 
+  async Common_Button_Color_code_for_games(value1: string) {
+    const ele = this.page.locator(this.Event_Data_Elements.Common_Button_Color_code_for_games)
+
+
+
+    try {
+
+      await expect(ele).toHaveValue("#74c107")
+    } catch (error) {
+      throw new Error('Aloompa | admin | Event Data | Places | "" |  Error occured: ' + error)
+    }
+  }
+
+
+
+       // Module Name: Aloompa | Admin | Mobile App CMS
+  // Feature Name: Aloompa Mobile App CMS - Event Data
+  // Screen Type: Desktop
+  // Description: 
+  async Select_category_for_games_1() {
+    const ele = this.page.locator(this.Event_Data_Elements.Select_category_for_games_1)
+    try {
+      await ele.click()
+    } catch (error) {
+      throw new Error('Aloompa | admin | Event Data | Places | "" |  Error occured: ' + error)
+    }
+  }
+
+
+        // Module Name: Aloompa | Admin | Mobile App CMS
+  // Feature Name: Aloompa Mobile App CMS - Event Data
+  // Screen Type: Desktop
+  // Description: 
+  async Validate_games_category_1_is_Visible() {
+    const ele = this.page.locator(this.Event_Data_Elements.Validate_games_category_1_is_Visible).nth(0)
+    try {
+      await ele.isVisible()
+    } catch (error) {
+      throw new Error('Aloompa | admin | Event Data | Places | "" |  Error occured: ' + error)
+    }
+  }
+
+
+         // Module Name: Aloompa | Admin | Mobile App CMS
+  // Feature Name: Aloompa Mobile App CMS - Event Data
+  // Screen Type: Desktop
+  // Description: 
+  async Select_category_for_games_2() {
+    const ele = this.page.locator(this.Event_Data_Elements.Select_category_for_games_2).nth(0)
+    try {
+      await ele.click()
+    } catch (error) {
+      throw new Error('Aloompa | admin | Event Data | Places | "" |  Error occured: ' + error)
+    }
+  }
+
+    // Module Name: Aloompa | Admin | Mobile App CMS
+  // Feature Name: Aloompa Mobile App CMS - Event Data
+  // Screen Type: Desktop
+  // Description: 
+  async Click_action_btn_1_for_games() {
+    const ele = this.page.locator(this.Event_Data_Elements.Click_action_btn_1_for_games).nth(0)
+    try {
+      await ele.click()
+    } catch (error) {
+      throw new Error('Aloompa | admin | Event Data | Places | "" |  Error occured: ' + error)
+    }
+  }
+
+
+
+
+
+  //////////////////////////////////////////////////////////////////////////////////////////////////
+  /////////////////////////////////////////       Events    ///////////////////////////////////////
+  ///////////////////////////////////////////////////////////////////////////////////////////////
+
+
+  
+  // Module Name: Aloompa | Admin | Mobile App CMS
+  // Feature Name: Aloompa Mobile App CMS - Event Data
+  // Screen Type: Desktop
+  // Description: 
+  async click_Events() {
+    const ele = this.page.locator(this.Event_Data_Elements.click_Events)
+    try {
+      await ele.click()
+    } catch (error) {
+      throw new Error('Aloompa | admin | Event Data | Places | "" |  Error occured: ' + error)
+    }
+  }
+
+
+    // Module Name: Aloompa | Admin | Mobile App CMS
+  // Feature Name: Aloompa Mobile App CMS - Event Data
+  // Screen Type: Desktop
+  // Description: 
+  async Terget_Events() {
+    const ele = this.page.locator(this.Event_Data_Elements.Terget_Events)
+    try {
+      await expect.soft(ele).toBeVisible()
+    } catch (error) {
+      throw new Error('Aloompa | admin | Event Data | Places | "" |  Error occured: ' + error)
+    }
+  }
+
+
+
+    // Module Name: Aloompa | Admin | Mobile App CMS
+  // Feature Name: Aloompa Mobile App CMS - Event Data
+  // Screen Type: Desktop
+  // Description: clicking "CSV" has Downloaded or not
+  async click_export_csv_button_for_Events() {
+    const [download] = await Promise.all([
+      this.page.waitForEvent('download'),
+      this.page.locator(this.Event_Data_Elements.click_export_csv_button).click()
+    ])
+    const suggestedFileName = download.suggestedFilename()
+    try {
+      if (suggestedFileName.match('events-export.csv')) {
+        const filePath = 'Test_data_that_gets_downloaded/' + suggestedFileName
+        await download.saveAs(filePath)
+        expect.soft(existsSync(filePath)).toBeTruthy()
+      } else {
+        throw new Error('File name not correct ')
+      }
+    } catch (error) {
+      throw new Error('Aloompa | admin | Event Data | Places | "" |  Error occured: ' + error)
+    }
+  }
+
+
+     // Module Name: Aloompa | Admin | Mobile App CMS
+  // Feature Name: Aloompa Mobile App CMS - Event Data
+  // Screen Type: Desktop
+  // Description: 
+  async Click_New_Events() {
+    const ele = this.page.locator(this.Event_Data_Elements.Click_New_Events)
+    try {
+      await ele.click()
+    } catch (error) {
+      throw new Error('Aloompa | admin | Event Data | Places | "" |  Error occured: ' + error)
+    }
+  }
+
+     // Module Name: Aloompa | Admin | Mobile App CMS
+  // Feature Name: Aloompa Mobile App CMS - Event Data
+  // Screen Type: Desktop
+  // Description:
+  async Event_Name(value: string) {
+    const ele = this.page.locator(this.Event_Data_Elements.Event_Name).nth(0)
+    try {
+      await ele.type(value, {
+        delay: 200
+      })
+    } catch (error) {
+      throw new Error('Aloompa | admin | Event Data | Places | "" |  Error occured: ' + error)
+    }
+  }
+
+      // Module Name: Aloompa | Admin | Mobile App CMS
+  // Feature Name: Aloompa Mobile App CMS - Event Data
+  // Screen Type: Desktop
+  // Description:
+  async Events_Description(value: string) {
+    const ele = this.page.locator(this.Event_Data_Elements.Events_Description).nth(0)
+    try {
+      await ele.fill(value, {
+       
+      })
+    } catch (error) {
+      throw new Error('Aloompa | admin | Event Data | Places | "" |  Error occured: ' + error)
+    }
+  }
+  
+  
+         // Module Name: Aloompa | Admin | Mobile App CMS
+  // Feature Name: Aloompa Mobile App CMS - Event Data
+  // Screen Type: Desktop
+  // Description:
+  async Events_Custom_Preview_Text() {
+    const ele = this.page.locator(this.Event_Data_Elements.Events_Custom_Preview_Text)
+    try {
+      await this.page.waitForTimeout(2000)
+      await ele.check({
+        force: true
+      })
+    } catch (error) {
+      throw new Error('Aloompa | admin | Event Data | Places | "" |  Error occured: ' + error)
+    }
+  }
+
+        // Module Name: Aloompa | Admin | Mobile App CMS
+  // Feature Name: Aloompa Mobile App CMS - Event Data
+  // Screen Type: Desktop
+  // Description:
+  async Events_Preview_Text(value: string) {
+    const ele = this.page.locator(this.Event_Data_Elements.Events_Preview_Text)
+    try {
+      await ele.fill(value)
+    } catch (error) {
+      throw new Error('Aloompa | admin | Event Data | Places | "" |  Error occured: ' + error)
+    }
+  }
+
+    // Module Name: Aloompa | Admin | Mobile App CMS
+  // Feature Name: Aloompa Mobile App CMS - Event Data
+  // Screen Type: Desktop
+  // Description:
+  async status_Message(value: string) {
+    const ele = this.page.locator(this.Event_Data_Elements.status_Message)
+    try {
+      await ele.type(value, {
+        delay: 200
+      })
+    } catch (error) {
+      throw new Error('Aloompa | admin | Event Data | Places | "" |  Error occured: ' + error)
+    }
+  }
+
+     // Module Name: Aloompa | Admin | Mobile App CMS
+  // Feature Name: Aloompa Mobile App CMS - Event Data
+  // Screen Type: Desktop
+  // Description:
+  async Event_capacity(value: string) {
+    const ele = this.page.locator(this.Event_Data_Elements.Event_capacity)
+    try {
+      await ele.type(value, {
+        delay: 200
+      })
+    } catch (error) {
+      throw new Error('Aloompa | admin | Event Data | Places | "" |  Error occured: ' + error)
+    }
+  }
+         // Module Name: Aloompa | Admin | Mobile App CMS
+  // Feature Name: Aloompa Mobile App CMS - Event Data
+  // Screen Type: Desktop
+  // Description:
+  async Check_Start_End_Times_TBD() {
+    const ele = this.page.locator(this.Event_Data_Elements.Check_Start_End_Times_TBD)
+    try {
+      await this.page.waitForTimeout(2000)
+      await ele.check({
+        force: true
+      })
+    } catch (error) {
+      throw new Error('Aloompa | admin | Event Data | Places | "" |  Error occured: ' + error)
+    }
+  }
+
+
+          // Module Name: Aloompa | Admin | Mobile App CMS
+  // Feature Name: Aloompa Mobile App CMS - Event Data
+  // Screen Type: Desktop
+  // Description:
+  async input_Start_Time_for_event() {
+    const ele = this.page.locator(this.Event_Data_Elements.input_End_Time_Date_for_event)
+    const ele2 = this.page.locator(this.Event_Data_Elements.input_End_Time_houre_for_event)
+    try {
+      await ele.fill("06/02/2024")
+      await ele2.fill("010:00 AM")
+    } catch (error) {
+      throw new Error('Aloompa | admin | Event Data | Places | "" |  Error occured: ' + error)
+    }
+  }
 
 }

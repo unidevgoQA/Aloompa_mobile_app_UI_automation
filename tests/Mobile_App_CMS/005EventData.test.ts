@@ -27,6 +27,7 @@ test("005EventData | Verify Mobile App navigation is working properly", async ({
 
     
 })
+
 test.describe('use the same authentication mechanism',async()=>{
     test.use({storageState:authFile})
 test("Aloompa-MobileApp-TC-001_Event_Data_Places_001 | Validate import csv is functional  ", async ({ EventData,page, AppsPage }) => {
@@ -353,7 +354,7 @@ test("Aloompa-MobileApp-TC-006_Event_Data_Places_006 | Validate create a new gro
         await EventData.Click_Create_New_User_group()
     })
     await test.step('click on import csv button ', async() =>{ 
-        await EventData.User_Group_Name('User Group Name')
+        await EventData.User_Group_Name('Delete User Group')
     })
     await test.step('click on import csv button ', async() =>{ 
         await EventData.Click_Save()
@@ -368,7 +369,7 @@ test("Aloompa-MobileApp-TC-006_Event_Data_Places_006 | Validate create a new gro
         await EventData.Click_User_Group()
     })
     await test.step('click on import csv button ', async() =>{ 
-        await EventData.input_on_Search_field_user_group("User")
+        await EventData.input_on_Search_field_user_group("Delete")
     })
     await test.step('click on import csv button ', async() =>{ 
         await page.waitForTimeout(2000)
@@ -701,6 +702,8 @@ test("Aloompa-MobileApp-TC-015_Event_Data_Places_015 |validate page size  ", asy
 
     
 })
+
+
 test.skip("Aloompa-MobileApp-TC-016_Event_Data_Places_016 |validate Check box  ", async ({ EventData,page, AppsPage }) => {
 
     await test.step('Navigate to apps directory', async() =>{ 
@@ -758,6 +761,8 @@ test.skip("Aloompa-MobileApp-TC-017_Event_Data_Places_017 |validate Sorting  ", 
 
     
 })
+
+
 test("Aloompa-MobileApp-TC-018_Event_Data_Places_018 |validate action button and its features  ", async ({ EventData,page, AppsPage }) => {
 
     await test.step('Navigate to apps directory', async() =>{ 
@@ -1009,11 +1014,11 @@ test("Aloompa-MobileApp-TC-021_Event_Data_Places_021 |validate next And Previous
 })
 
 
-                    ////////////////////////////////////////////////////////////////////////////////////////
+//                     ////////////////////////////////////////////////////////////////////////////////////////
 
-                    //----------------------------------- Stages --------------------------------------- //
+//                     //----------------------------------- Stages --------------------------------------- //
 
-                    //////////////////////////////////////////////////////////////////////////////////////
+//                     //////////////////////////////////////////////////////////////////////////////////////
 
 
 
@@ -1654,6 +1659,8 @@ test("Aloompa-MobileApp-TC-035_Event_Data_Stages_015 |validate page size  ", asy
 
     
 })
+
+
 test.skip("Aloompa-MobileApp-TC-036_Event_Data_Stages_016 |validate Check box  ", async ({ EventData,page, AppsPage }) => {
 
     await test.step('Navigate to apps directory', async() =>{ 
@@ -1711,6 +1718,8 @@ test.skip("Aloompa-MobileApp-TC-037_Event_Data_Stages_017 |validate Sorting  ", 
 
     
 })
+
+
 test("Aloompa-MobileApp-TC-038_Event_Data_Stages_018 |validate action button and its features  ", async ({ EventData,page, AppsPage }) => {
 
     await test.step('Navigate to apps directory', async() =>{ 
@@ -1957,11 +1966,11 @@ test("Aloompa-MobileApp-TC-041_Event_Data_Stages_021 |validate next And Previous
     
 })
 
-                    ////////////////////////////////////////////////////////////////////////////////////////
+//                     ////////////////////////////////////////////////////////////////////////////////////////
 
-                    //----------------------------------- Performers -------------------------------------//
+//                     //----------------------------------- Performers -------------------------------------//
 
-                    //////////////////////////////////////////////////////////////////////////////////////
+//                     //////////////////////////////////////////////////////////////////////////////////////
 
 
 test("Aloompa-MobileApp-TC-042_Event_Data_Performers_001 | Validate import csv is functional  ", async ({ EventData,page, AppsPage }) => {
@@ -2528,6 +2537,8 @@ test("Aloompa-MobileApp-TC-052_Event_Data_Performers_011 | validate page size  "
 
     
 })
+
+
 test.skip("Aloompa-MobileApp-TC-053_Event_Data_Performers_012 | validate Check box  ", async ({ EventData,page, AppsPage }) => {
 
     await test.step('Navigate to apps directory', async() =>{ 
@@ -2585,8 +2596,6 @@ test.skip("Aloompa-MobileApp-TC-054_Event_Data_Performers_013 | validate Sorting
 
     
 })
-
-
 
 
 test("Aloompa-MobileApp-TC-055_Event_Data_Performers_014 |validate action button and its features  ", async ({ EventData,page, AppsPage }) => {
@@ -3338,6 +3347,8 @@ test("Aloompa-MobileApp-TC-068_Event_Data_Athletes_009 | validate filter by cate
 
     
 })
+
+
 test.skip("Aloompa-MobileApp-TC-069_Event_Data_Athletes_010 | validate page size  ", async ({ EventData,page, AppsPage }) => {
 
     await test.step('Navigate to apps directory', async() =>{ 
@@ -3429,6 +3440,8 @@ test.skip("Aloompa-MobileApp-TC-080_Event_Data_Athletes_012 | validate Sorting  
 
     
 })
+
+
 test("Aloompa-MobileApp-TC-081_Event_Data_Athletes_013 |validate action button and its features  ", async ({ EventData,page, AppsPage }) => {
 
     await test.step('Navigate to apps directory', async() =>{ 
@@ -3823,7 +3836,7 @@ test("Aloompa-MobileApp-TC-086_Event_Data_Games_002 | Validate export  csv is fu
 
     
 })
-test("Aloompa-MobileApp-TC-087_Event_Data_Games_003 | validate all text input fields in New Game from Games ", async ({ EventData,page, AppsPage }) => {
+test("Aloompa-MobileApp-TC-087_Event_Data_Games_003 | validate all text input fields in New Game from Games . ", async ({ EventData,page, AppsPage }) => {
 
     await test.step('Navigate to apps directory', async() =>{ 
         await page.goto('#/apps/b19541b3-6e40-4442-a5d9-c3c8bcfc6325/3d27b311-49c1-4173-8168-c1381dbf97b7',{waitUntil:"domcontentloaded"})
@@ -3860,20 +3873,19 @@ test("Aloompa-MobileApp-TC-087_Event_Data_Games_003 | validate all text input fi
 
     await test.step('click on import csv button ', async() =>{ 
         await page.waitForTimeout(2000)
+        
         await EventData.Games_Preview_Text('Preview Text')
     })
 
-///-----------------------
+
 
     await test.step('click on import csv button ', async() =>{ 
-        await EventData.Click_Include_Highlight_Real()
+        await EventData.input_Start_Time()
     })
 
 
 
-    await test.step('click on import csv button ', async() =>{ 
-        await EventData.Youtube_Video_embed('Youtube Video embed')
-    })
+   
     
    
     
@@ -3890,12 +3902,43 @@ test("Aloompa-MobileApp-TC-088_Event_Data_Games_004 | validate `Add a new place`
         await EventData.click_EventData()
     })
     await test.step('click on Places button', async() =>{ 
-        await EventData.click_Athletes()
+        await EventData.click_Games()
     })
 
     await test.step('click on import csv button ', async() =>{ 
-        await EventData.Click_New_Athletes()
+        await EventData.Click_New_Games()
     })
+
+    await test.step('click on EventData button', async() =>{ 
+        await EventData.Click_Add_A_New_Place()
+    })
+
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.input_POI_Name('POI_Name')
+        await page.waitForTimeout(2000)
+    })
+
+    await test.step('click on Places button', async() =>{ 
+        await EventData.Select_A_Category()
+    })
+
+
+    await test.step('click on EventData button', async() =>{ 
+        await EventData.Select_Save_Category()
+    })
+
+
+
+
+
+
+
+
+    await test.step('click on Places button', async() =>{ 
+        await EventData.Select_A_Place()
+    })
+
+    
   
 
 
@@ -3916,10 +3959,10 @@ test("Aloompa-MobileApp-TC-089_Event_Data_Games_005 | validate upload and remove
         await EventData.click_EventData()
     })
     await test.step('click on Places button', async() =>{ 
-        await EventData.click_Athletes()
+        await EventData.click_Games()
     })
     await test.step('click on import csv button ', async() =>{ 
-        await EventData.Click_New_Athletes()
+        await EventData.Click_New_Games()
     })
     await test.step('file_uploader_for_splash_page_logo_file', async() =>{ 
         await EventData.file_uploader_for_image_file('banner.png')
@@ -3942,10 +3985,10 @@ test("Aloompa-MobileApp-TC-090_Event_Data_Games_006 | Validate upload your own f
         await EventData.click_EventData()
     })
     await test.step('click on Places button', async() =>{ 
-        await EventData.click_Athletes()
+        await EventData.click_Games()
     })
     await test.step('click on import csv button ', async() =>{ 
-        await EventData.Click_New_Athletes()
+        await EventData.Click_New_Games()
     })
     await test.step('font_uploader_for_description', async() =>{ 
         await EventData.font_uploader_for_description('Midnight.ttf')
@@ -3953,6 +3996,7 @@ test("Aloompa-MobileApp-TC-090_Event_Data_Games_006 | Validate upload your own f
          
         
     })
+    
     await test.step('click on import csv button ', async() =>{ 
         await EventData.Click_font_dropdown()
     })
@@ -3983,15 +4027,15 @@ test("Aloompa-MobileApp-TC-091_Event_Data_Games_007 | Validate create new catego
         await EventData.click_EventData()
     })
     await test.step('click on Places button', async() =>{ 
-        await EventData.click_Athletes()
+        await EventData.click_Games()
     })
     await test.step('click on import csv button ', async() =>{ 
-        await EventData.Click_New_Athletes()
+        await EventData.Click_New_Games()
     })
     
 
     await test.step('click on import csv button ', async() =>{ 
-        await EventData.Athletes_Name('Athletes Name')
+        await EventData.Games_Name('Game Name')
     })
 
     await test.step('click on import csv button ', async() =>{ 
@@ -4004,28 +4048,42 @@ test("Aloompa-MobileApp-TC-091_Event_Data_Games_007 | Validate create new catego
 
     await test.step('click on import csv button ', async() =>{ 
         await page.waitForTimeout(2000)
-        await EventData.is_featured_for_Athletes()
+        await EventData.is_featured_for_Gmaes()
     })
 
-    await test.step('click on import csv button ', async() =>{ 
-        await page.waitForTimeout(2000)
-        await EventData.Add_Border_to_Athlete_Images_in_App_for_Athletes()
-    })
+    
    
     await test.step('click on import csv button ', async() =>{ 
-        await EventData.New_Category_Name("Athletes Category Name")
+        await EventData.New_Category_Name("Game Category Name")
     })
     
     
     
     await test.step('click on import csv button ', async() =>{ 
         await EventData.Click_Save()
+        await page.waitForTimeout(2000)
+
+    })
+
+
+    await test.step('click on Places button', async() =>{ 
+        await EventData.Select_A_Place()
+    })
+
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.input_Start_Time()
     })
 
 
 
+
+
+
+
+
     await test.step('click on import csv button ', async() =>{ 
-        await EventData.Click_Save_Athletes()
+        await EventData.Click_Save_Games()
+        await page.waitForTimeout(2000)
     })
 
 
@@ -4034,7 +4092,7 @@ test("Aloompa-MobileApp-TC-091_Event_Data_Games_007 | Validate create new catego
         await EventData.Click_Categories()
     })
     await test.step('click on import csv button ', async() =>{ 
-        await EventData.input_on_Search_field("Athletes")
+        await EventData.input_on_Search_field("Game Category Name")
         await page.waitForTimeout(2000)
     })
     await test.step('click on import csv button ', async() =>{ 
@@ -4072,19 +4130,61 @@ test("Aloompa-MobileApp-TC-092_Event_Data_Games_008 | Validate `Common Button?` 
         await EventData.click_EventData()
     })
     await test.step('click on Places button', async() =>{ 
-        await EventData.click_Athletes()
+        await EventData.click_Games()
     })
     await test.step('click on import csv button ', async() =>{ 
-        await EventData.Click_New_Athletes()
+        await EventData.Click_New_Games()
     })
     
 
     await test.step('click on import csv button ', async() =>{ 
-        await EventData.Athletes_Name('Athletes Name')
+        await EventData.Games_Name('Games Name')
+    })
+
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.Check_Common_Button()
     })
 
     
 
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.Games_Common_Button_Text('Common Button')
+    })
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.Games_Common_Button_URL('https://ariful15.hashnode.dev/')
+        await page.waitForTimeout(1000)
+        
+    })
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.Check_Common_Button_Deeplink()
+    })
+
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.Click_Create_New_Deeplink()
+        await EventData.Click_Select_a_type()
+        await EventData.select_native_webview()
+        await EventData.fill_deeplink_title()
+        await EventData.fill_deeplink_URL()
+        await EventData.Check_Use_Device_Id()
+        await EventData.Click_Save_Deeplink()
+    })
+
+    await test.step('Select_deep_link_Edit_and_Remove', async() =>{ 
+      
+        await EventData.Select_deep_link_Edit()
+        await EventData.Delete_created_deep_link()
+        await EventData.Delete_created_deep_link()
+    })
+
+    // await test.step('Delete Created Deeplink', async() =>{ 
+    //     await EventData.Check_Common_Button()
+    //     await EventData.Check_Common_Button_Deeplink()
+    //     await EventData.Select_deep_link_for_Delete()
+    // })
+
+
+    
+
 
 
 
@@ -4092,11 +4192,12 @@ test("Aloompa-MobileApp-TC-092_Event_Data_Games_008 | Validate `Common Button?` 
     
 
 
-    
+    //-----------------
 
 
     
 })
+
 test("Aloompa-MobileApp-TC-093_Event_Data_Games_009 | validate 'Common Button Color'   ", async ({ EventData,page, AppsPage }) => {
 
     await test.step('Navigate to apps directory', async() =>{ 
@@ -4108,18 +4209,24 @@ test("Aloompa-MobileApp-TC-093_Event_Data_Games_009 | validate 'Common Button Co
         await EventData.click_EventData()
     })
     await test.step('click on Places button', async() =>{ 
-        await EventData.click_Places()
+        await EventData.click_Games()
     })
     await test.step('click on import csv button ', async() =>{ 
-        await EventData.Click_New_Places()
+        await EventData.Click_New_Games()
+    })
+
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.Check_Common_Button()
     })
     
     
+    
     await test.step('click on import csv button ', async() =>{ 
-        await EventData.Fill_Common_Button_Color_code("#74c107")
+        await EventData.Fill_Common_Button_Color_code_for_games("#74c107")
     })
+    
     await test.step('fill_color_code ', async() =>{ 
-        await EventData.Common_Button_Color_code('#74C107');
+        await EventData.Common_Button_Color_code_for_games('#74C107');
         
     })
     
@@ -4137,16 +4244,30 @@ test("Aloompa-MobileApp-TC-094_Event_Data_Games_010 | Create New Game ", async (
         await EventData.click_EventData()
     })
     await test.step('click on Places button', async() =>{ 
-        await EventData.click_Athletes()
+        await EventData.click_Games()
     })
     await test.step('click on import csv button ', async() =>{ 
-        await EventData.Click_New_Athletes()
+        await EventData.Click_New_Games()
     })
     await test.step('click on import csv button ', async() =>{ 
-        await EventData.Athletes_Name('001 Delete it')
+        await EventData.Games_Name('001 Game Delete it')
     })
     await test.step('click on import csv button ', async() =>{ 
-        await EventData.Click_Save_Athletes()
+        await EventData.input_Start_Time()
+    })
+
+    await test.step('click on Places button', async() =>{ 
+        await EventData.Select_A_Place()
+    })
+
+    await test.step('click on Places button', async() =>{ 
+        await EventData.Select_A_Category()
+    })
+
+
+
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.Click_Save_Games()
     })
     
 
@@ -4163,16 +4284,16 @@ test("Aloompa-MobileApp-TC-095_Event_Data_Games_011 | validate search functional
         await EventData.click_EventData()
     })
     await test.step('click on Places button', async() =>{ 
-        await EventData.click_Athletes()
+        await EventData.click_Games()
     })
     
     await test.step('click on import csv button ', async() =>{ 
-        await EventData.input_on_Search_field('001 Delete it')
+        await EventData.input_on_Search_field('001 Game Delete it')
     })
 
   
     await test.step('click on import csv button ', async() =>{ 
-        await EventData.validate_search_functionality_for_Athletes()
+        await EventData.validate_search_functionality_for_Games()
     })
     
 
@@ -4189,7 +4310,7 @@ test("Aloompa-MobileApp-TC-096_Event_Data_Games_012 | validate filter by categor
         await EventData.click_EventData()
     })
     await test.step('click on Places button', async() =>{ 
-        await EventData.click_Athletes()
+        await EventData.click_Games()
     })
     
     await test.step('click on Places button', async() =>{ 
@@ -4210,8 +4331,12 @@ test("Aloompa-MobileApp-TC-096_Event_Data_Games_012 | validate filter by categor
  
 
 
+
+
+
+
     await test.step('click on Places button', async() =>{ 
-        await EventData.Validate_Athletes_category_1_is_Visible()
+        await EventData.Validate_games_category_1_is_Visible()
     })
 
 
@@ -4225,12 +4350,10 @@ test("Aloompa-MobileApp-TC-096_Event_Data_Games_012 | validate filter by categor
    
 
     await test.step('click on Places button', async() =>{ 
-        await EventData.Select_category_for_Athletes_2()
+        await EventData.Select_category_for_games_2()
     })
 
 
-    
-   
 
     await test.step('click on Places button', async() =>{ 
         await EventData.Validate_Athletes_category_2_is_Visible()
@@ -4240,6 +4363,8 @@ test("Aloompa-MobileApp-TC-096_Event_Data_Games_012 | validate filter by categor
 
     
 })
+
+
 test.skip("Aloompa-MobileApp-TC-097_Event_Data_Games_013 | validate page size  ", async ({ EventData,page, AppsPage }) => {
 
     await test.step('Navigate to apps directory', async() =>{ 
@@ -4331,6 +4456,8 @@ test.skip("Aloompa-MobileApp-TC-099_Event_Data_Games_015 | validate Sorting  ", 
 
     
 })
+
+
 test("Aloompa-MobileApp-TC-0100_Event_Data_Games_016 |validate action button and its features  ", async ({ EventData,page, AppsPage }) => {
 
     await test.step('Navigate to apps directory', async() =>{ 
@@ -4342,7 +4469,7 @@ test("Aloompa-MobileApp-TC-0100_Event_Data_Games_016 |validate action button and
         await EventData.click_EventData()
     })
     await test.step('click on Places button', async() =>{ 
-        await EventData.click_Athletes()
+        await EventData.click_Games()
     })
     await test.step('click on Places button', async() =>{ 
         await EventData.validate_Action_btn_is_visible()
@@ -4396,38 +4523,44 @@ test("Aloompa-MobileApp-TC-0100_Event_Data_Games_016 |validate action button and
         await EventData.Click_Edit_details()
     })
     await test.step('click on import csv button ', async() =>{ 
-        await EventData.Athletes_Description('Stage Description')
+        await EventData.Games_Description('Game Description')
     })
     await test.step('click on import csv button ', async() =>{ 
-        await EventData.Athletes_Custom_Preview_Text()
+        await EventData.Games_Custom_Preview_Text()
     })
 
     await test.step('click on Places button', async() =>{ 
-        await EventData.Click_Save_Athletes()
+        await EventData.Click_Save_Games()
     })
 
     await test.step('click on Places button', async() =>{ 
-        await EventData.Click_return_to_all_Athletes()
+        await EventData.Click_return_to_all_Games()
     })
 
+   
     await test.step('click on Places button', async() =>{ 
-        await EventData.Click_action_btn_1()
+        await EventData.Click_action_btn_1_for_games()
     })
   
+   
+
     await test.step('click on Places button', async() =>{ 
-        await EventData.validate_Delete_Athlete_is_visible()
+        await EventData.validate_Delete_Games_is_visible()
     })
 
 
+    
+
     await test.step('click on Places button', async() =>{
-        await EventData.Click_action_btn_1() 
+        await EventData.Click_action_btn_1_for_games() 
         await page.waitForTimeout(1000)
-        await EventData.Click_Delete_Athlete()
+        await EventData.Click_Delete_Games()
     })
 
 
     await test.step('click on Places button', async() =>{ 
         await EventData.Validate_Yes_btn()
+        
         await page.waitForTimeout(4000)
     })
 
@@ -4446,7 +4579,7 @@ test("Aloompa-MobileApp-TC-0101_Event_Data_Games_017 |validate make visible and 
         await EventData.click_EventData()
     })
     await test.step('click on Places button', async() =>{ 
-        await EventData.click_Athletes()
+        await EventData.click_Games()
     })
     
     await test.step('click on Places button', async() =>{ 
@@ -4500,9 +4633,11 @@ test("Aloompa-MobileApp-TC-0101_Event_Data_Games_017 |validate make visible and 
 
     
     
+    
 
     
 })
+
 test("Aloompa-MobileApp-TC-0102_Event_Data_Games_018 |validate Delete from bottom dropdown ", async ({ EventData,page, AppsPage }) => {
 
     await test.step('Navigate to apps directory', async() =>{ 
@@ -4514,22 +4649,7 @@ test("Aloompa-MobileApp-TC-0102_Event_Data_Games_018 |validate Delete from botto
         await EventData.click_EventData()
     })
     await test.step('click on Places button', async() =>{ 
-        await EventData.click_Athletes()
-    })
-    await test.step('click on import csv button ', async() =>{ 
-        await EventData.Click_New_Athletes()
-    })
-    await test.step('click on import csv button ', async() =>{ 
-        await EventData.Athletes_Name('001 Delete it')
-    })
-    await test.step('click on import csv button ', async() =>{ 
-        await EventData.Click_Save_Athletes()
-    })
-    await test.step('click on EventData button', async() =>{ 
-        await EventData.click_EventData()
-    })
-    await test.step('click on Places button', async() =>{ 
-        await EventData.click_Athletes()
+        await EventData.click_Games()
     })
 
     await test.step('click on Places button', async() =>{ 
@@ -4561,7 +4681,7 @@ test("Aloompa-MobileApp-TC-0103_Event_Data_Games_019 |validate next And Previous
         await EventData.click_EventData()
     })
     await test.step('click on Places button', async() =>{ 
-        await EventData.click_Performers()
+        await EventData.click_Games()
     })
     await test.step('click on Places button', async() =>{ 
         await EventData.click_Next_button()
@@ -4571,9 +4691,9 @@ test("Aloompa-MobileApp-TC-0103_Event_Data_Games_019 |validate next And Previous
 
     
 
-    
+
     await test.step('click on Places button', async() =>{ 
-        await EventData.Validate_next_btn_is_working_for_Athlete()
+        await EventData.Validate_next_btn_is_working_for_Games()
     })
 
 
@@ -4585,8 +4705,11 @@ test("Aloompa-MobileApp-TC-0103_Event_Data_Games_019 |validate next And Previous
     
 
 
+  
+
+
     await test.step('click on Places button', async() =>{ 
-        await EventData.Validate_Previous_btn_is_working_for_Athlete()
+        await EventData.Validate_Previous_btn_is_working_for_Games()
     })
     
     
@@ -4609,7 +4732,7 @@ test("Aloompa-MobileApp-TC-0103_Event_Data_Games_019 |validate next And Previous
 
 
 
-test("Aloompa-MobileApp-TC-0104_Event_Data_Events_001 | Validate import csv is functional  ", async ({ EventData,page, AppsPage }) => {
+test("Aloompa-MobileApp-TC-085_Event_Data_Events_001 | Validate import csv is functional ", async ({ EventData,page, AppsPage }) => {
 
     await test.step('Navigate to apps directory', async() =>{ 
         await page.goto('#/apps/b19541b3-6e40-4442-a5d9-c3c8bcfc6325/3d27b311-49c1-4173-8168-c1381dbf97b7',{waitUntil:"domcontentloaded"})
@@ -4621,11 +4744,9 @@ test("Aloompa-MobileApp-TC-0104_Event_Data_Events_001 | Validate import csv is f
     })
     
     await test.step('click on Places button', async() =>{ 
-        await EventData.click_Satges()
+        await EventData.click_Events()
     })
-    await test.step('click on Places button', async() =>{ 
-        await EventData.click_Performers()
-    })
+
     
     
     await test.step('click on import csv button ', async() =>{ 
@@ -4638,8 +4759,26 @@ test("Aloompa-MobileApp-TC-0104_Event_Data_Events_001 | Validate import csv is f
 
     
     await test.step('verify import csv text is visible ', async() =>{ 
-        await EventData.Terget_Performers()
+        await EventData.Terget_Events()
     })
+
+    await test.step('verify import csv text is visible ', async() =>{ 
+        await EventData.Click_Timezone_of_Import_Date_Times()
+    })
+    await test.step('verify import csv text is visible ', async() =>{ 
+        await EventData.Select_Timezone_of_Import_Date_Times()
+    })
+
+    await test.step('verify import csv text is visible ', async() =>{ 
+        await EventData.Click_Uses_European_Time_Format_for_games()
+    })
+    await test.step('verify import csv text is visible ', async() =>{ 
+        await EventData.Click_Times_are_Unix_Time_Stamps_for_games()
+    })
+    await test.step('verify import csv text is visible ', async() =>{ 
+        await EventData.Click_Unix_Time_Stamps_are_in_Milliseconds_for_games()
+    })
+
 
     await test.step('verify import csv text is visible ', async() =>{ 
         await page.waitForTimeout(2000)
@@ -4683,7 +4822,7 @@ test("Aloompa-MobileApp-TC-0104_Event_Data_Events_001 | Validate import csv is f
 
     
 })
-test("Aloompa-MobileApp-TC-0105_Event_Data_Events_002 | Validate export  csv is functional  ", async ({ EventData,page, AppsPage }) => {
+test("Aloompa-MobileApp-TC-086_Event_Data_Events_002 | Validate export  csv is functional  ", async ({ EventData,page, AppsPage }) => {
 
     await test.step('Navigate to apps directory', async() =>{ 
         await page.goto('#/apps/b19541b3-6e40-4442-a5d9-c3c8bcfc6325/3d27b311-49c1-4173-8168-c1381dbf97b7',{waitUntil:"domcontentloaded"})
@@ -4694,13 +4833,13 @@ test("Aloompa-MobileApp-TC-0105_Event_Data_Events_002 | Validate export  csv is 
         await EventData.click_EventData()
     })
     await test.step('click on Places button', async() =>{ 
-        await EventData.click_Performers()
+        await EventData.click_Events()
     })
     
     
    
     await test.step('click on import csv button ', async() =>{ 
-        await EventData.click_export_csv_button_for_Performers()
+        await EventData.click_export_csv_button_for_Events()
     })
     
     
@@ -4712,7 +4851,7 @@ test("Aloompa-MobileApp-TC-0105_Event_Data_Events_002 | Validate export  csv is 
 
     
 })
-test("Aloompa-MobileApp-TC-0106_Event_Data_Games_003 | validate all text input fields in New Athletes from Athletes ", async ({ EventData,page, AppsPage }) => {
+test("Aloompa-MobileApp-TC-0106_Event_Data_Events_003 | validate all text input fields in New Athletes from Athletes ", async ({ EventData,page, AppsPage }) => {
 
     await test.step('Navigate to apps directory', async() =>{ 
         await page.goto('#/apps/b19541b3-6e40-4442-a5d9-c3c8bcfc6325/3d27b311-49c1-4173-8168-c1381dbf97b7',{waitUntil:"domcontentloaded"})
@@ -4723,66 +4862,48 @@ test("Aloompa-MobileApp-TC-0106_Event_Data_Games_003 | validate all text input f
         await EventData.click_EventData()
     })
     await test.step('click on Places button', async() =>{ 
-        await EventData.click_Athletes()
+        await EventData.click_Events()
     })
 
-    await test.step('click on import csv button ', async() =>{ 
-        await EventData.Click_New_Athletes()
-    })
     
     await test.step('click on import csv button ', async() =>{ 
-        await EventData.Athletes_Name('A new Athletes Name')
+        await EventData.Click_New_Events()
     })
+    
 
     await test.step('click on import csv button ', async() =>{ 
-        await EventData.Athletes_Position('Athletes Position')
+        await EventData.Event_Name('A new Event Name')
     })
 
-    await test.step('click on import csv button ', async() =>{ 
-        await EventData.Athletes_Jersey('Athletes Jersey')
-    })
 
     await test.step('click on import csv button ', async() =>{ 
-        await EventData.Athletes_Height('6.2')
-    })
-
-    await test.step('click on import csv button ', async() =>{ 
-        await EventData.Athletes_Weight('72')
-    })
-
-    await test.step('click on import csv button ', async() =>{ 
-        await EventData.Athletes_Age('27')
-    })
-
-    await test.step('click on import csv button ', async() =>{ 
-        await EventData.Athletes_Birthday('06/01/2022')
-    })
-
-    await test.step('click on import csv button ', async() =>{ 
-        await EventData.Athletes_Place_of_Birth('Athletes Place of Birth')
-    })
-
-    await test.step('click on import csv button ', async() =>{ 
-        await EventData.Athletes_Description('Athletes Description')
+        await EventData.Events_Description('Events Description')
     })
 
 
 
+   
     await test.step('click on import csv button ', async() =>{ 
-        await EventData.Athletes_Custom_Preview_Text()
+        await EventData.Events_Custom_Preview_Text()
         
     })
 
 
     await test.step('click on import csv button ', async() =>{ 
         await page.waitForTimeout(2000)
-        await EventData.Athletes_Preview_Text('Preview Text')
+        await EventData.Events_Preview_Text('Preview Text')
     })
 
 
     
+   
+
     await test.step('click on import csv button ', async() =>{ 
-        await EventData.Website_URL_for_athlete('Website URL')
+        await EventData.Image_Copyright_Text('Image Copyright Text')
+    })
+
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.status_Message('Status Message')
     })
 
    
@@ -4790,38 +4911,36 @@ test("Aloompa-MobileApp-TC-0106_Event_Data_Games_003 | validate all text input f
     
 
     await test.step('click on import csv button ', async() =>{ 
-        await EventData.Instagram_User_Name_for_Athlete('Instagram User Name')
+        await EventData.Event_capacity('10')
     })
 
     
-
-   
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.input_Start_Time_for_event()
+    })
 
     await test.step('click on import csv button ', async() =>{ 
-        await EventData.Tictok_User_Name_for_Athlete('Tictok User Name')
+        await EventData.input_End_Time()
+    })
+
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.Check_Start_End_Times_TBD()
+        
     })
 
 
     
-    await test.step('click on import csv button ', async() =>{ 
-        await EventData.Youtube_Channel_URL('Youtube Channel URL')
-    })
-
-    await test.step('click on import csv button ', async() =>{ 
-        await EventData.Click_Include_Highlight_Real()
-    })
-
-
-
-    await test.step('click on import csv button ', async() =>{ 
-        await EventData.Youtube_Video_embed('Youtube Video embed')
-    })
+    
     
    
     
     
 })
-test("Aloompa-MobileApp-TC-0107_Event_Data_Games_004 | Validate Start Time , End Time and Start / End Times TBD ", async ({ EventData,page, AppsPage }) => {
+
+
+//---5/20/2024---//
+
+test("Aloompa-MobileApp-TC-0107_Event_Data_Events_004 | Validate Start Time , End Time and Start / End Times TBD ", async ({ EventData,page, AppsPage }) => {
 
     await test.step('Navigate to apps directory', async() =>{ 
         await page.goto('#/apps/b19541b3-6e40-4442-a5d9-c3c8bcfc6325/3d27b311-49c1-4173-8168-c1381dbf97b7',{waitUntil:"domcontentloaded"})
@@ -4845,7 +4964,7 @@ test("Aloompa-MobileApp-TC-0107_Event_Data_Games_004 | Validate Start Time , End
     
     
 })
-test("Aloompa-MobileApp-TC-0108_Event_Data_Games_005 | Validate `Add a New Stage` and select the stage  ", async ({ EventData,page, AppsPage }) => {
+test("Aloompa-MobileApp-TC-0108_Event_Data_Events_005 | Validate `Add a New Stage` and select the stage  ", async ({ EventData,page, AppsPage }) => {
 
     await test.step('Navigate to apps directory', async() =>{ 
         await page.goto('#/apps/b19541b3-6e40-4442-a5d9-c3c8bcfc6325/3d27b311-49c1-4173-8168-c1381dbf97b7',{waitUntil:"domcontentloaded"})
@@ -4869,7 +4988,7 @@ test("Aloompa-MobileApp-TC-0108_Event_Data_Games_005 | Validate `Add a New Stage
     
     
 })
-test("Aloompa-MobileApp-TC-0109_Event_Data_Games_006 | Validate Performers and select Performer ", async ({ EventData,page, AppsPage }) => {
+test("Aloompa-MobileApp-TC-0109_Event_Data_Events_006 | Validate Performers and select Performer ", async ({ EventData,page, AppsPage }) => {
 
     await test.step('Navigate to apps directory', async() =>{ 
         await page.goto('#/apps/b19541b3-6e40-4442-a5d9-c3c8bcfc6325/3d27b311-49c1-4173-8168-c1381dbf97b7',{waitUntil:"domcontentloaded"})
@@ -5281,6 +5400,8 @@ test("Aloompa-MobileApp-TC-0118_Event_Data_Events_015 | validate filter by categ
 
     
 })
+
+
 test.skip("Aloompa-MobileApp-TC-0119_Event_Data_Events_016 | validate page size  ", async ({ EventData,page, AppsPage }) => {
 
     await test.step('Navigate to apps directory', async() =>{ 
@@ -5372,6 +5493,8 @@ test.skip("Aloompa-MobileApp-TC-0121_Event_Data_Events_018 | validate Sorting  "
 
     
 })
+
+
 test("Aloompa-MobileApp-TC-0122_Event_Data_Events_019 |validate action button and its features  ", async ({ EventData,page, AppsPage }) => {
 
     await test.step('Navigate to apps directory', async() =>{ 
@@ -6232,6 +6355,8 @@ test("Aloompa-MobileApp-TC-0136_Event_Data_Articles_011 | validate filter by cat
 
     
 })
+
+
 test.skip("Aloompa-MobileApp-TC-0137_Event_Data_Articles_012 | validate page size  ", async ({ EventData,page, AppsPage }) => {
 
     await test.step('Navigate to apps directory', async() =>{ 
@@ -6323,6 +6448,8 @@ test.skip("Aloompa-MobileApp-TC-0139_Event_Data_Articles_014 | validate Sorting 
 
     
 })
+
+
 test("Aloompa-MobileApp-TC-0140_Event_Data_Articles_015 |validate action button and its features  ", async ({ EventData,page, AppsPage }) => {
 
     await test.step('Navigate to apps directory', async() =>{ 
@@ -7102,6 +7229,8 @@ test("Aloompa-MobileApp-TC-0136_Event_Data_Articles_009 | validate filter by cat
 
     
 })
+
+
 test.skip("Aloompa-MobileApp-TC-0137_Event_Data_Articles_010 | validate page size  ", async ({ EventData,page, AppsPage }) => {
 
     await test.step('Navigate to apps directory', async() =>{ 
@@ -7193,6 +7322,8 @@ test.skip("Aloompa-MobileApp-TC-0139_Event_Data_Articles_012 | validate Sorting 
 
     
 })
+
+
 test("Aloompa-MobileApp-TC-0140_Event_Data_Articles_013 |validate action button and its features  ", async ({ EventData,page, AppsPage }) => {
 
     await test.step('Navigate to apps directory', async() =>{ 
@@ -7457,12 +7588,18 @@ test("Aloompa-MobileApp-TC-0143_Event_Data_Articles_016 |validate next And Previ
 })
 
 
+    
 
-
-
-
-//12/03/2024
-
+    
 })
+
+
+
+
+
+
+//---5/20/2024---//
+
+
 
 

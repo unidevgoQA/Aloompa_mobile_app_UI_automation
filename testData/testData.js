@@ -2785,29 +2785,29 @@ export class TestData {
     return Math.floor(Math.random() * 100) + 1900;
   }
 
-  static readCounter() {
-    // const fileSystem = require('fs');
-    // const filePath = './counter.txt';
-    // return parseInt(fileSystem.readFileSync(filePath, 'utf8'));
-    return await.readFile("./counter.txt").then((data) => {
-      return parseInt(data);
-    });
-  }
+  // static readCounter() {
+  //   // const fileSystem = require('fs');
+  //   // const filePath = './counter.txt';
+  //   // return parseInt(fileSystem.readFileSync(filePath, 'utf8'));
+  //   return await.readFile("./counter.txt").then((data) => {
+  //     return parseInt(data);
+  //   });
+  // }
 
-  static writeCounter(counter) {
-    // const fileSystem = require('fs');
-    // const filePath = './counter.txt';
-    // fileSystem.writeFileSync(filePath, String(counter + 1));
-    await.writeFile("counter.txt", String(counter + 1));
-  }
+  // static writeCounter(counter) {
+  //   // const fileSystem = require('fs');
+  //   // const filePath = './counter.txt';
+  //   // fileSystem.writeFileSync(filePath, String(counter + 1));
+  //   await.writeFile("counter.txt", String(counter + 1));
+  // }
 
-  static writeCounterFile() {
-    await.readFile("testData/login.json").then((obj) => {
-      let counter = parseInt(obj.counter);
-      obj["counter"] += 1;
-      await.writeFile("testData/login.json", obj);
-    });
-  }
+  // static writeCounterFile() {
+  //   await.readFile("testData/login.json").then((obj) => {
+  //     let counter = parseInt(obj.counter);
+  //     obj["counter"] += 1;
+  //     await.writeFile("testData/login.json", obj);
+  //   });
+  // }
 
   static getCounter() {
     this.writeCounter(this.readCounter());
