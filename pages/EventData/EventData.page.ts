@@ -27,6 +27,10 @@ export default class EventData {
     Click_Uses_European_Time_Format:"(//input[@type='checkbox'])[2]",
     validate_search_functionality_common:"//a[@title='001 Delete it']",
     click_Name_sorting_common:"//div[text()='Name']",
+    Click_Make_Visible_btn_common:"//div[@role='tooltip']//li[1]",
+    click_Import:"//span[text()='Import']",
+    click_upload_another_common:"//span[text()='Upload Another']",
+
    
 
 
@@ -446,11 +450,11 @@ Select_category_for_Articles_2:"//p[text()='Category validation for Article 002 
 Validate_Articles_category_1_is_Visible:"//a[contains(text(),'01-Category validation for Article 001 (Do not Delete)')]",
 Validate_Articles_category_2_is_Visible:"//a[contains(text(),'02-Category validation for Article 002 (Do not Delete)')]",
 Click_return_to_all_Articles:"//a[contains(text(),'Return to All Articles')]",
-Click_action_btn_for_Articles:`//div[text()="001 Delete it"]//parent::div/parent::a/parent::td/following-sibling::td//button[1]`,
+Click_action_btn_for_Articles:`//a[contains(text(),'Articles Subject 001')]//parent::td/following-sibling::td[4]/div/button`,
 validate_Delete_Articles_is_visible:"//p[text()='Delete Articles']",
 Click_Delete_Articles:"//p[text()='Delete Article']",
 click_Name_sorting_Articles:"//div[text()='Name']",
-Select_checkBox_for_delete_for_Articles:`//div[text()="001 Delete it"]//parent::div/parent::div/parent::a/parent::td//preceding-sibling::td//input`,
+Select_checkBox_for_delete_for_Articles:`//a[contains(text(),'001 Delete it')]/parent::td/preceding-sibling::td//input`,
 Validate_next_btn_is_working_for_Articles:"//span[text()='Next']",
 Validate_Previous_btn_is_working_for_Articles:"//span[text()='Previous']",
 CheckPublishThisArticleLater:"//input[@type='checkbox']",
@@ -467,9 +471,37 @@ validate_Delete_Article_is_visible:"//p[text()='Delete Article']",
 
                     ////////////////////////////////////////////////////////////////////////////////////////
 
-                    //----------------------------------- FAQ -------------------------------------//
+                    //----------------------------------- FAQs -------------------------------------//
 
                     //////////////////////////////////////////////////////////////////////////////////////
+click_FAQs:"//a[contains(text(),'FAQ')]",
+Terget_FAQs:"//p[text()='faqs']",
+Click_New_FAQs:"//a[contains(text(),'+ New FAQ')]",
+FAQs_Name:"//input[@class='MuiInputBase-input MuiOutlinedInput-input']",
+FAQs_Questions:"//div[text()='Question*']//parent::div/parent::label/parent::div//input",
+FAQs_Answer:"//div[@class='public-DraftStyleDefault-block public-DraftStyleDefault-ltr']",
+Click_on_select_A_Category_for_FAQs:"(//label[text()='Please select a category']/following-sibling::div)[1]",
+select_A_Category_for_FAQs:"//li[text()='Category 001 (Do not delete)']",
+Click_Save_FAQs:"(//span[text()='Save FAQ'])[1]",
+Select_category_for_FAQs_1:"//p[text()='Category validation for FAQ 001 (Do not Delete)']/parent::li",
+Select_category_for_FAQs_2:"//p[text()='Category validation for FAQ 002 (Do not Delete)']/parent::li",
+Validate_FAQs_category_1_is_Visible:"//a[contains(text(),'01-Category validation for FAQ 001 (Do not Delete)')]",
+Validate_FAQs_category_2_is_Visible:"//a[contains(text(),'02-Category validation for FAQ 002 (Do not Delete)')]",
+Click_return_to_all_FAQs:"//a[contains(text(),'Return to All FAQs')]",
+Click_action_btn_for_FAQs:`//a[contains(text(),'FAQs Subject 001')]//parent::td/following-sibling::td[4]/div/button`,
+validate_Delete_FAQs_is_visible:"//p[text()='Delete FAQs']",
+Click_Delete_FAQs:"//p[text()='001 Delete FAQ']",
+click_Name_sorting_FAQs:"//div[text()='Name']",
+Select_checkBox_for_delete_for_FAQs:`//a[contains(text(),'001 Delete it')]/parent::td/preceding-sibling::td//input`,
+Validate_next_btn_is_working_for_FAQs:"//span[text()='Next']",
+Validate_Previous_btn_is_working_for_FAQs:"//span[text()='Previous']",
+CheckPublishThisFAQLater:"//input[@type='checkbox']",
+input_Start_Time_Date_for_FAQ:"//input[@placeholder='06/01/2022']",
+input_Start_Time_hour_for_FAQ:"//input[@placeholder='08:00 AM']",
+validate_Delete_FAQ_is_visible:"//p[text()='Delete FAQ']",
+Select_checkBox_for_delete_for_imported_FAQs:`//a[contains(text(),'001 FAQ import test')]/parent::td/preceding-sibling::td//input`,
+is_featured_for_FAQs:"//label[text()='Is Featured']/parent::div/parent::div//input",
+
 
 
 
@@ -523,6 +555,47 @@ validate_Delete_Article_is_visible:"//p[text()='Delete Article']",
           throw new Error('Aloompa|admin | Ticketing | Create Ticket Type | Ticket Name Input Field Element Not Found : Error occured'+error)
      
       }
+  }
+
+    // Module Name: Aloompa | Admin | Mobile App CMS
+  // Feature Name: Aloompa Mobile App CMS - Event Data
+  // Screen Type: Desktop
+  // Description: 
+  async Click_action_btn_for_user_group_common(value: string) {
+    const ele = this.page.locator(`//a[@title='${value}']//parent::td//following-sibling::td[3]//div/button`).nth(0)
+    try {
+      await this.page.waitForTimeout(2000)
+      await ele.click()
+    } catch (error) {
+      throw new Error('Aloompa | admin | Event Data | Places | "" |  Error occured: ' + error)
+    }
+  }
+
+
+    // Module Name: Aloompa | Admin | Mobile App CMS
+  // Feature Name: Aloompa Mobile App CMS - Event Data
+  // Screen Type: Desktop
+  // Description: 
+  async Click_Make_Visible_btn_common() {
+    const ele = this.page.locator(this.Event_Data_Elements.Click_Make_Visible_btn_common).nth(0)
+    try {
+      await ele.click()
+    } catch (error) {
+      throw new Error('Aloompa | admin | Event Data | Places | "" |  Error occured: ' + error)
+    }
+  }
+
+      // Module Name: Aloompa | Admin | Mobile App CMS
+  // Feature Name: Aloompa Mobile App CMS - Event Data
+  // Screen Type: Desktop
+  // Description: 
+  async click_Import() {
+    const ele = this.page.locator(this.Event_Data_Elements.click_Import).nth(0)
+    try {
+      await ele.click({timeout:1000})
+    } catch (error) {
+      throw new Error('Aloompa | admin | Event Data | Places | "" |  Error occured: ' + error)
+    }
   }
 
   
@@ -703,6 +776,15 @@ validate_Delete_Article_is_visible:"//p[text()='Delete Article']",
   // Description: 
   async click_Name_sorting_common() {
     const ele = this.page.locator(this.Event_Data_Elements.click_Name_sorting_common).nth(0)
+    try {
+      await ele.click()
+    } catch (error) {
+      throw new Error('Aloompa | admin | Event Data | Places | "" |  Error occured: ' + error)
+    }
+  }
+
+  async click_upload_another_common() {
+    const ele = this.page.locator(this.Event_Data_Elements.click_upload_another_common).nth(0)
     try {
       await ele.click()
     } catch (error) {
@@ -2101,6 +2183,7 @@ validate_Delete_Article_is_visible:"//p[text()='Delete Article']",
   async input_on_Search_field(value: string) {
     const ele = this.page.locator(this.Event_Data_Elements.input_on_Search_field).nth(0)
     try {
+      
       await ele.fill(value)
     } catch (error) {
       throw new Error('Aloompa | admin | Event Data | Places | "" |  Error occured: ' + error)
@@ -2217,7 +2300,7 @@ validate_Delete_Article_is_visible:"//p[text()='Delete Article']",
   async Click_Edit_details() {
     const ele = this.page.locator(this.Event_Data_Elements.Edit_details_btn).nth(0)
     try {
-      await ele.click()
+      await ele.click({force:true})
     } catch (error) {
       throw new Error('Aloompa | admin | Event Data | Places | "" |  Error occured: ' + error)
     }
@@ -2240,9 +2323,9 @@ validate_Delete_Article_is_visible:"//p[text()='Delete Article']",
   // Screen Type: Desktop
   // Description: 
   async Click_Make_Visible_btn() {
-    const ele = this.page.locator(this.Event_Data_Elements.Make_visible_btn)
+    const ele = this.page.locator(this.Event_Data_Elements.Make_visible_btn).nth(0)
     try {
-      await ele.click({force:true,timeout:1000})
+      await ele.dblclick({timeout:1000})
     } catch (error) {
       throw new Error('Aloompa | admin | Event Data | Places | "" |  Error occured: ' + error)
     }
@@ -5379,9 +5462,7 @@ validate_Delete_Article_is_visible:"//p[text()='Delete Article']",
   async Articles_Subject(value: string) {
     const ele = this.page.locator(this.Event_Data_Elements.Articles_Subject).nth(0)
     try {
-      await ele.type(value, {
-        delay: 200
-      })
+      await ele.fill(value)
     } catch (error) {
       throw new Error('Aloompa | admin | Articles Data | Places | "" |  Error occured: ' + error)
     }
@@ -5394,9 +5475,7 @@ validate_Delete_Article_is_visible:"//p[text()='Delete Article']",
   async Articles_Body(value: string) {
     const ele = this.page.locator(this.Event_Data_Elements.Articles_Body).nth(0)
     try {
-      await ele.fill(value, {
-       
-      })
+      await ele.fill(value)
     } catch (error) {
       throw new Error('Aloompa | admin | Articles Data | Places | "" |  Error occured: ' + error)
     }
@@ -5826,7 +5905,7 @@ validate_Delete_Article_is_visible:"//p[text()='Delete Article']",
   async Click_action_btn_for_Articles() {
     const ele = this.page.locator(this.Event_Data_Elements.Click_action_btn_for_Articles).nth(0)
     try {
-      await ele.click()
+      await ele.click({force:true,timeout:1000})
     } catch (error) {
       throw new Error('Aloompa | admin | Articles Data | Places | "" |  Error occured: ' + error)
     }
@@ -6020,6 +6099,570 @@ validate_Delete_Article_is_visible:"//p[text()='Delete Article']",
       throw new Error('Aloompa | admin | Event Data | Places | "" |  Error occured: ' + error)
     }
   }
+
+
+  //////////////////////////////////////////////////////////////////////////////////////////////////
+  /////////////////////////////////////////       FAQ    ///////////////////////////////////////
+  ///////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+  
+  // Module Name: Aloompa | Admin | Mobile App CMS
+  // Feature Name: Aloompa Mobile App CMS - FAQs Data
+  // Screen Type: Desktop
+  // Description: 
+  async click_FAQs() {
+    const ele = this.page.locator(this.Event_Data_Elements.click_FAQs)
+    try {
+      await ele.click()
+    } catch (error) {
+      throw new Error('Aloompa | admin | FAQs Data | Places | "" |  Error occured: ' + error)
+    }
+  }
+
+
+    // Module Name: Aloompa | Admin | Mobile App CMS
+  // Feature Name: Aloompa Mobile App CMS - FAQs Data
+  // Screen Type: Desktop
+  // Description: 
+  async Terget_FAQs() {
+    const ele = this.page.locator(this.Event_Data_Elements.Terget_FAQs)
+    try {
+      await expect.soft(ele).toBeVisible()
+    } catch (error) {
+      throw new Error('Aloompa | admin | FAQs Data | Places | "" |  Error occured: ' + error)
+    }
+  }
+
+
+
+    // Module Name: Aloompa | Admin | Mobile App CMS
+  // Feature Name: Aloompa Mobile App CMS - FAQs Data
+  // Screen Type: Desktop
+  // Description: clicking "CSV" has Downloaded or not
+  async click_export_csv_button_for_FAQs() {
+    const [download] = await Promise.all([
+      this.page.waitForEvent('download'),
+      this.page.locator(this.Event_Data_Elements.click_export_csv_button).click()
+    ])
+    const suggestedFileName = download.suggestedFilename()
+    try {
+      if (suggestedFileName.match('faqs-export.csv')) {
+        const filePath = 'Test_data_that_gets_downloaded/' + suggestedFileName
+        await download.saveAs(filePath)
+        expect.soft(existsSync(filePath)).toBeTruthy()
+      } else {
+        throw new Error('File name not correct ')
+      }
+    } catch (error) {
+      throw new Error('Aloompa | admin | FAQs Data | Places | "" |  Error occured: ' + error)
+    }
+  }
+
+
+     // Module Name: Aloompa | Admin | Mobile App CMS
+  // Feature Name: Aloompa Mobile App CMS - FAQs Data
+  // Screen Type: Desktop
+  // Description: 
+  async Click_New_FAQs() {
+    const ele = this.page.locator(this.Event_Data_Elements.Click_New_FAQs)
+    try {
+      await ele.click()
+    } catch (error) {
+      throw new Error('Aloompa | admin | FAQs Data | Places | "" |  Error occured: ' + error)
+    }
+  }
+
+
+
+      // Module Name: Aloompa | Admin | Mobile App CMS
+  // Feature Name: Aloompa Mobile App CMS - FAQs Data
+  // Screen Type: Desktop
+  // Description:
+  async FAQs_Name(value: string) {
+    const ele = this.page.locator(this.Event_Data_Elements.FAQs_Name).nth(0)
+    try {
+      await ele.fill(value)
+    } catch (error) {
+      throw new Error('Aloompa | admin | FAQs Data | Places | "" |  Error occured: ' + error)
+    }
+  }
+  
+  
+        // Module Name: Aloompa | Admin | Mobile App CMS
+  // Feature Name: Aloompa Mobile App CMS - FAQs Data
+  // Screen Type: Desktop
+  // Description:
+  async FAQs_Questions(value: string) {
+    const ele = this.page.locator(this.Event_Data_Elements.FAQs_Questions)
+    try {
+      await ele.fill(value)
+    } catch (error) {
+      throw new Error('Aloompa | admin | FAQs Data | Places | "" |  Error occured: ' + error)
+    }
+  }
+
+        // Module Name: Aloompa | Admin | Mobile App CMS
+  // Feature Name: Aloompa Mobile App CMS - FAQs Data
+  // Screen Type: Desktop
+  // Description:
+  async FAQs_Answer(value: string) {
+    const ele = this.page.locator(this.Event_Data_Elements.FAQs_Answer)
+    try {
+      await ele.fill(value)
+    } catch (error) {
+      throw new Error('Aloompa | admin | FAQs Data | Places | "" |  Error occured: ' + error)
+    }
+  }
+
+    // Module Name: Aloompa | Admin | Mobile App CMS
+  // Feature Name: Aloompa Mobile App CMS - FAQs Data
+  // Screen Type: Desktop
+  // Description:
+  async status_Message_for_FAQs(value: string) {
+    const ele = this.page.locator(this.Event_Data_Elements.status_Message)
+    try {
+      await ele.type(value, {
+        delay: 200
+      })
+    } catch (error) {
+      throw new Error('Aloompa | admin | FAQs Data | Places | "" |  Error occured: ' + error)
+    }
+  }
+
+
+         // Module Name: Aloompa | Admin | Mobile App CMS
+  // Feature Name: Aloompa Mobile App CMS - FAQs Data
+  // Screen Type: Desktop
+  // Description:
+  async Check_Start_End_Times_TBD_for_FAQs() {
+    const ele = this.page.locator(this.Event_Data_Elements.Check_Start_End_Times_TBD)
+    try {
+      await this.page.waitForTimeout(2000)
+      await ele.check({
+        force: true
+      })
+    } catch (error) {
+      throw new Error('Aloompa | admin | FAQs Data | Places | "" |  Error occured: ' + error)
+    }
+  }
+
+
+
+
+       // Module Name: Aloompa | Admin | Mobile App CMS
+  // Feature Name: Aloompa Mobile App CMS - FAQs Data
+  // Screen Type: Desktop
+  // Description: 
+  async click_choose_a_stage_for_FAQs() {
+    const ele = this.page.locator(this.Event_Data_Elements.click_choose_a_stage)
+    try {
+      await ele.click()
+    } catch (error) {
+      throw new Error('Aloompa | admin | FAQs Data | Places | "" |  Error occured: ' + error)
+    }
+  }
+
+         // Module Name: Aloompa | Admin | Mobile App CMS
+  // Feature Name: Aloompa Mobile App CMS - FAQs Data
+  // Screen Type: Desktop
+  // Description: 
+  async select_a_stage_for_FAQs() {
+    const ele = this.page.locator(this.Event_Data_Elements.select_a_stage)
+    try {
+      await ele.click()
+    } catch (error) {
+      throw new Error('Aloompa | admin | FAQs Data | Places | "" |  Error occured: ' + error)
+    }
+  }
+
+
+           // Module Name: Aloompa | Admin | Mobile App CMS
+  // Feature Name: Aloompa Mobile App CMS - FAQs Data
+  // Screen Type: Desktop
+  // Description: 
+  async Click_Add_a_new_stage_for_FAQs() {
+    const ele = this.page.locator(this.Event_Data_Elements.Click_Add_a_new_stage)
+    try {
+      await ele.click()
+    } catch (error) {
+      throw new Error('Aloompa | admin | FAQs Data | Places | "" |  Error occured: ' + error)
+    }
+  }
+
+      // Module Name: Aloompa | Admin | Mobile App CMS
+  // Feature Name: Aloompa Mobile App CMS - FAQs Data
+  // Screen Type: Desktop
+  // Description:
+  async input_stage_name_for_FAQs(value: string) {
+    const ele = this.page.locator(this.Event_Data_Elements.input_stage_name)
+    try {
+      await ele.fill(value)
+    } catch (error) {
+      throw new Error('Aloompa | admin | FAQs Data | Places | "" |  Error occured: ' + error)
+    }
+  }
+
+
+             // Module Name: Aloompa | Admin | Mobile App CMS
+  // Feature Name: Aloompa Mobile App CMS - FAQs Data
+  // Screen Type: Desktop
+  // Description: 
+  async Click_on_select_A_Category_for_FAQs() {
+    const ele = this.page.locator(this.Event_Data_Elements.Click_on_select_A_Category)
+    try {
+      await ele.click()
+    } catch (error) {
+      throw new Error('Aloompa | admin | FAQs Data | Places | "" |  Error occured: ' + error)
+    }
+  }
+
+
+               // Module Name: Aloompa | Admin | Mobile App CMS
+  // Feature Name: Aloompa Mobile App CMS - FAQs Data
+  // Screen Type: Desktop
+  // Description: 
+  async select_A_Category_for_FAQs() {
+    const ele = this.page.locator(this.Event_Data_Elements.select_A_Category)
+    try {
+      await ele.click()
+    } catch (error) {
+      throw new Error('Aloompa | admin | FAQs Data | Places | "" |  Error occured: ' + error)
+    }
+  }
+
+
+    // Module Name: Aloompa | Admin | Mobile App CMS
+  // Feature Name: Aloompa Mobile App CMS - FAQs Data
+  // Screen Type: Desktop
+  // Description:
+  async Click_Save_FAQs() {
+    const ele = this.page.locator(this.Event_Data_Elements.Click_Save_FAQs)
+
+    try {
+      await ele.click()
+
+    } catch (error) {
+      throw new Error('Aloompa | admin | FAQs Data | Places | "" |  Error occured: ' + error)
+    }
+  }
+
+
+
+
+
+
+     // Module Name: Aloompa | Admin | Mobile App CMS
+  // Feature Name: Aloompa Mobile App CMS - FAQs Data
+  // Screen Type: Desktop
+  // Description:
+  async is_featured_for_FAQs() {
+    const ele = this.page.locator(this.Event_Data_Elements.is_featured_for_FAQs)
+    try {
+      await ele.check({
+        force: true
+      })
+    } catch (error) {
+      throw new Error('Aloompa | admin | FAQs Data | Places | "" |  Error occured: ' + error)
+    }
+  }
+
+ 
+        // Module Name: Aloompa | Admin | Mobile App CMS
+  // Feature Name: Aloompa Mobile App CMS - FAQs Data
+  // Screen Type: Desktop
+  // Description:
+  async Check_Common_Button_Deeplink_for_FAQs() {
+    const ele = this.page.locator(this.Event_Data_Elements.Check_Common_Button_Deeplink).nth(3)
+    try {
+     
+      await ele.check({
+        force: true
+      })
+    } catch (error) {
+      throw new Error('Aloompa | admin | FAQs Data | Places | "" |  Error occured: ' + error)
+    }
+  }
+
+ 
+
+         // Module Name: Aloompa | Admin | Mobile App CMS
+  // Feature Name: Aloompa Mobile App CMS - FAQs Data
+  // Screen Type: Desktop
+  // Description: 
+  async Check_Use_Device_Id_for_FAQs() {
+    
+    const ele6 = this.page.locator(this.Event_Data_Elements.Check_Use_Device_Id).nth(4)
+   
+    try {
+      
+      await ele6.check({force: true})
+   
+
+    } catch (error) {
+      throw new Error('Aloompa | admin | FAQs Data | Places | "" |  Error occured: ' + error)
+    }
+  }
+
+
+
+
+
+         // Module Name: Aloompa | Admin | Mobile App CMS
+  // Feature Name: Aloompa Mobile App CMS - FAQs Data
+  // Screen Type: Desktop
+  // Description: 
+  async Select_category_for_FAQs_1() {
+    const ele = this.page.locator(this.Event_Data_Elements.Select_category_for_FAQs_1).nth(0)
+    try {
+      await ele.click()
+    } catch (error) {
+      throw new Error('Aloompa | admin | FAQs Data | Places | "" |  Error occured: ' + error)
+    }
+  }
+
+           // Module Name: Aloompa | Admin | Mobile App CMS
+  // Feature Name: Aloompa Mobile App CMS - FAQs Data
+  // Screen Type: Desktop
+  // Description: 
+  async Select_category_for_FAQs_2() {
+    const ele = this.page.locator(this.Event_Data_Elements.Select_category_for_FAQs_2).nth(0)
+    try {
+      await ele.click()
+    } catch (error) {
+      throw new Error('Aloompa | admin | FAQs Data | Places | "" |  Error occured: ' + error)
+    }
+  }
+
+        // Module Name: Aloompa | Admin | Mobile App CMS
+  // Feature Name: Aloompa Mobile App CMS - FAQs Data
+  // Screen Type: Desktop
+  // Description: 
+  async Validate_FAQs_category_1_is_Visible() {
+    const ele = this.page.locator(this.Event_Data_Elements.Validate_FAQs_category_1_is_Visible).nth(0)
+    try {
+      await ele.isVisible()
+    } catch (error) {
+      throw new Error('Aloompa | admin | FAQs Data | Places | "" |  Error occured: ' + error)
+    }
+  }
+        // Module Name: Aloompa | Admin | Mobile App CMS
+  // Feature Name: Aloompa Mobile App CMS - FAQs Data
+  // Screen Type: Desktop
+  // Description: 
+  async Validate_FAQs_category_2_is_Visible() {
+    const ele = this.page.locator(this.Event_Data_Elements.Validate_FAQs_category_2_is_Visible).nth(0)
+    try {
+      await ele.isVisible()
+    } catch (error) {
+      throw new Error('Aloompa | admin | FAQs Data | Places | "" |  Error occured: ' + error)
+    }
+  }
+
+       // Module Name: Aloompa | Admin | Mobile App CMS
+  // Feature Name: Aloompa Mobile App CMS - FAQs Data
+  // Screen Type: Desktop
+  // Description:
+  async Click_return_to_all_FAQs() {
+    const ele = this.page.locator(this.Event_Data_Elements.Click_return_to_all_FAQs)
+
+    try {
+      await ele.click()
+
+    } catch (error) {
+      throw new Error('Aloompa | admin | FAQs Data | Places | "" |  Error occured: ' + error)
+    }
+  }
+
+    // Module Name: Aloompa | Admin | Mobile App CMS
+  // Feature Name: Aloompa Mobile App CMS - FAQs Data
+  // Screen Type: Desktop
+  // Description: 
+  async Click_action_btn_for_FAQs() {
+    const ele = this.page.locator(this.Event_Data_Elements.Click_action_btn_for_FAQs).nth(0)
+    try {
+      await ele.click({force:true,timeout:1000})
+    } catch (error) {
+      throw new Error('Aloompa | admin | FAQs Data | Places | "" |  Error occured: ' + error)
+    }
+  }
+
+    
+   // Module Name: Aloompa | Admin | Mobile App CMS
+  // Feature Name: Aloompa Mobile App CMS - FAQs Data
+  // Screen Type: Desktop
+  // Description:
+  async validate_Delete_FAQs_is_visible() {
+    const ele = this.page.locator(this.Event_Data_Elements.validate_Delete_FAQs_is_visible).nth(0)
+
+    try {
+      await ele.isVisible()
+
+    } catch (error) {
+      throw new Error('Aloompa | admin | FAQs Data | Places | "" |  Error occured: ' + error)
+    }
+  }
+
+        // Module Name: Aloompa | Admin | Mobile App CMS
+  // Feature Name: Aloompa Mobile App CMS - FAQs Data
+  // Screen Type: Desktop
+  // Description:
+  async Click_Delete_FAQs() {
+    const ele = this.page.locator(this.Event_Data_Elements.Click_Delete_FAQs).nth(0)
+
+    try {
+      await ele.click()
+
+    } catch (error) {
+      throw new Error('Aloompa | admin | FAQs Data | Places | "" |  Error occured: ' + error)
+    }
+  }
+
+      // Module Name: Aloompa | Admin | Mobile App CMS
+  // Feature Name: Aloompa Mobile App CMS - FAQs Data
+  // Screen Type: Desktop
+  // Description: 
+  async click_Name_sorting_FAQs() {
+    const ele = this.page.locator(this.Event_Data_Elements.click_Name_sorting_FAQs).nth(0)
+    try {
+      await ele.click()
+    } catch (error) {
+      throw new Error('Aloompa | admin | FAQs Data | Places | "" |  Error occured: ' + error)
+    }
+  }
+
+    // Module Name: Aloompa | Admin | Mobile App CMS
+  // Feature Name: Aloompa Mobile App CMS - FAQs Data
+  // Screen Type: Desktop
+  // Description: 
+  async Select_checkBox_for_delete_for_FAQs() {
+    const ele = this.page.locator(this.Event_Data_Elements.Select_checkBox_for_delete_for_imported_FAQs).nth(0)
+    try {
+     
+      await ele.check({force: true})
+    } catch (error) {
+      throw new Error('Aloompa | admin | FAQs Data | Places | "" |  Error occured: ' + error)
+    }
+  }
+
+       // Module Name: Aloompa | Admin | Mobile App CMS
+  // Feature Name: Aloompa Mobile App CMS - FAQs Data
+  // Screen Type: Desktop
+  // Description: 
+  async Validate_next_btn_is_working_for_FAQs() {
+    const ele = this.page.locator(this.Event_Data_Elements.Validate_next_btn_is_working_for_FAQs)
+    try {
+      await expect.soft(ele).toBeVisible()
+    } catch (error) {
+      throw new Error('Aloompa | admin | FAQs Data | Places | "" |  Error occured: ' + error)
+    }
+  }
+
+      // Module Name: Aloompa | Admin | Mobile App CMS
+  // Feature Name: Aloompa Mobile App CMS - FAQs Data
+  // Screen Type: Desktop
+  // Description: 
+  async Validate_Previous_btn_is_working_for_FAQs() {
+    const ele = this.page.locator(this.Event_Data_Elements.Validate_Previous_btn_is_working_for_FAQs)
+    try {
+      await expect.soft(ele).toBeVisible()
+    } catch (error) {
+      throw new Error('Aloompa | admin | FAQs Data | Places | "" |  Error occured: ' + error)
+    }
+  }
+
+           // Module Name: Aloompa | Admin | Mobile App CMS
+  // Feature Name: Aloompa Mobile App CMS - Event Data
+  // Screen Type: Desktop
+  // Description: 
+  async CheckPublishThisFAQLater() {
+    
+    const ele6 = this.page.locator(this.Event_Data_Elements.CheckPublishThisFAQLater)
+   
+    try {
+      
+      await ele6.check({force: true})
+   
+
+    } catch (error) {
+      throw new Error('Aloompa | admin | Event Data | Places | "" |  Error occured: ' + error)
+    }
+  }
+
+
+
+
+
+        // Module Name: Aloompa | Admin | Mobile App CMS
+  // Feature Name: Aloompa Mobile App CMS - Event Data
+  // Screen Type: Desktop
+  // Description: 
+  async Select_category_for_FAQ_1() {
+    const ele = this.page.locator(this.Event_Data_Elements.Select_category_for_FAQs_1)
+    try {
+      await ele.click()
+    } catch (error) {
+      throw new Error('Aloompa | admin | Event Data | Places | "" |  Error occured: ' + error)
+    }
+  }
+
+          // Module Name: Aloompa | Admin | Mobile App CMS
+  // Feature Name: Aloompa Mobile App CMS - Event Data
+  // Screen Type: Desktop
+  // Description: 
+  async Select_category_for_FAQ_2() {
+    const ele = this.page.locator(this.Event_Data_Elements.Select_category_for_FAQs_2)
+    try {
+      await ele.click()
+    } catch (error) {
+      throw new Error('Aloompa | admin | Event Data | Places | "" |  Error occured: ' + error)
+    }
+  }
+
+
+      // Module Name: Aloompa | Admin | Mobile App CMS
+  // Feature Name: Aloompa Mobile App CMS - Event Data
+  // Screen Type: Desktop
+  // Description: 
+  async Validate_FAQ_category_1_is_Visible() {
+    const ele = this.page.locator(this.Event_Data_Elements.Validate_FAQs_category_1_is_Visible).nth(0)
+    try {
+      await ele.isVisible()
+    } catch (error) {
+      throw new Error('Aloompa | admin | Event Data | Places | "" |  Error occured: ' + error)
+    }
+  }
+
+  
+      // Module Name: Aloompa | Admin | Mobile App CMS
+  // Feature Name: Aloompa Mobile App CMS - Event Data
+  // Screen Type: Desktop
+  // Description: 
+  async Validate_FAQ_category_2_is_Visible() {
+    const ele = this.page.locator(this.Event_Data_Elements.Validate_FAQs_category_1_is_Visible).nth(0)
+    try {
+      await ele.isVisible()
+    } catch (error) {
+      throw new Error('Aloompa | admin | Event Data | Places | "" |  Error occured: ' + error)
+    }
+  }
+
+     // Module Name: Aloompa | Admin | Mobile App CMS
+  // Feature Name: Aloompa Mobile App CMS - Event Data
+  // Screen Type: Desktop
+  // Description:
+  async validate_Delete_FAQ_is_visible() {
+    const ele = this.page.locator(this.Event_Data_Elements.validate_Delete_FAQ_is_visible).nth(0)
+
+    try {
+      await ele.isVisible()
+
+    } catch (error) {
+      throw new Error('Aloompa | admin | Event Data | Places | "" |  Error occured: ' + error)
+    }
+  }
+
 
   
 
