@@ -7504,7 +7504,7 @@ test.skip("Aloompa-MobileApp-TC-0139_Event_Data_FAQ_012 | validate Sorting  ", a
     
 })
 
-//---06/10/2024---//
+//---06/10/2024----//
 
 test("Aloompa-MobileApp-TC-0140_Event_Data_FAQ_013 |validate action button and its features  ", async ({ EventData,page, AppsPage }) => {
 
