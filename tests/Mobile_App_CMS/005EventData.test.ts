@@ -30,6 +30,7 @@ test("005EventData | Verify Mobile App navigation is working properly", async ({
 
 test.describe('use the same authentication mechanism',async()=>{
     test.use({storageState:authFile})
+
 test("Aloompa-MobileApp-TC-001_Event_Data_Places_001 | Validate import csv is functional  ", async ({ EventData,page, AppsPage }) => {
 
     await test.step('Navigate to apps directory', async() =>{ 
@@ -4165,7 +4166,7 @@ test("Aloompa-MobileApp-TC-092_Event_Data_Games_008 | Validate `Common Button?` 
         await EventData.select_native_webview()
         await EventData.fill_deeplink_title()
         await EventData.fill_deeplink_URL()
-        await EventData.Check_Use_Device_Id()
+        await EventData.Check_Use_Device_Id('4')
         await EventData.Click_Save_Deeplink()
     })
 
@@ -6569,14 +6570,7 @@ test.skip("Aloompa-MobileApp-TC-0139_Event_Data_Articles_014 | validate Sorting 
         await page.waitForTimeout(5000) 
         await EventData.Validate_Name_sorting()
     })
-    
-    
-    
-
-    
-    
-
-    
+     
 })
 test("Aloompa-MobileApp-TC-0140_Event_Data_Articles_015 |validate action button and its features  ", async ({ EventData,page, AppsPage }) => {
 
@@ -7003,9 +6997,6 @@ test("Aloompa-MobileApp-TC-0126_Event_Data_FAQ_001 | Validate import csv is func
 
     
 })
-
-
-
 test("Aloompa-MobileApp-TC-0127_Event_Data_FAQ_002 | Validate export  csv is functional  ", async ({ EventData,page, AppsPage }) => {
 
     await test.step('Navigate to apps directory', async() =>{ 
@@ -7036,9 +7027,6 @@ test("Aloompa-MobileApp-TC-0127_Event_Data_FAQ_002 | Validate export  csv is fun
 
     
 })
-
-
-
 test("Aloompa-MobileApp-TC-0128_Event_Data_FAQ_003 | validate all text input fields in New FAQ from FAQ ", async ({ EventData,page, AppsPage }) => {
 
     await test.step('Navigate to apps directory', async() =>{ 
@@ -7103,8 +7091,6 @@ test("Aloompa-MobileApp-TC-0130_Event_Data_FAQ_004 | Validate upload your own fo
 
     
 })
-
-
 test("Aloompa-MobileApp-TC-0131_Event_Data_FAQ_005 | Validate create new category and select category and delete Created one", async ({ EventData,page, AppsPage }) => {
 
     await test.step('Navigate to apps directory', async() =>{ 
@@ -7192,20 +7178,8 @@ test("Aloompa-MobileApp-TC-0131_Event_Data_FAQ_005 | Validate create new categor
         await page.waitForTimeout(2000)
     })
 
-
-
-
-
-    
-
-
-    
-
-
     
 })
-
-
 test("Aloompa-MobileApp-TC-0132_Event_Data_FAQ_006 | Validate create a new user group and select a user group and delete Created one", async ({ EventData,page, AppsPage }) => {
 
     await test.step('Navigate to apps directory', async() =>{ 
@@ -7273,9 +7247,6 @@ test("Aloompa-MobileApp-TC-0132_Event_Data_FAQ_006 | Validate create a new user 
 
     
 })
-
-
-
 test("Aloompa-MobileApp-TC-0134_Event_Data_FAQ_007 | Create New FAQ ", async ({ EventData,page, AppsPage }) => {
 
     await test.step('Navigate to apps directory', async() =>{ 
@@ -7313,10 +7284,6 @@ test("Aloompa-MobileApp-TC-0134_Event_Data_FAQ_007 | Create New FAQ ", async ({ 
 
     
 })
-
-
-
-
 test("Aloompa-MobileApp-TC-0135_Event_Data_FAQ_008 | validate search functionality  ", async ({ EventData,page, AppsPage }) => {
 
     await test.step('Navigate to apps directory', async() =>{ 
@@ -7343,9 +7310,6 @@ test("Aloompa-MobileApp-TC-0135_Event_Data_FAQ_008 | validate search functionali
 
     
 })
-
-
-
 test("Aloompa-MobileApp-TC-0136_Event_Data_FAQ_009 | validate filter by category  ", async ({ EventData,page, AppsPage }) => {
 
     await test.step('Navigate to apps directory', async() =>{ 
@@ -7408,10 +7372,6 @@ test("Aloompa-MobileApp-TC-0136_Event_Data_FAQ_009 | validate filter by category
 
     
 })
-
-
-
-
 test.skip("Aloompa-MobileApp-TC-0137_Event_Data_FAQ_010 | validate page size  ", async ({ EventData,page, AppsPage }) => {
 
     await test.step('Navigate to apps directory', async() =>{ 
@@ -7503,9 +7463,6 @@ test.skip("Aloompa-MobileApp-TC-0139_Event_Data_FAQ_012 | validate Sorting  ", a
 
     
 })
-
-//---06/10/2024----//
-
 test("Aloompa-MobileApp-TC-0140_Event_Data_FAQ_013 |validate action button and its features  ", async ({ EventData,page, AppsPage }) => {
 
     await test.step('Navigate to apps directory', async() =>{ 
@@ -7519,27 +7476,45 @@ test("Aloompa-MobileApp-TC-0140_Event_Data_FAQ_013 |validate action button and i
     await test.step('click on Places button', async() =>{ 
         await EventData.click_FAQs()
     })
+    
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.input_on_Search_field('just for test')
+    })
     await test.step('click on Places button', async() =>{ 
         await EventData.validate_Action_btn_is_visible()
     })
     await test.step('click on Places button', async() =>{ 
-        await EventData.Click_action_btn_1()
+        await EventData.Click_action_btn_for_FAQs()
     })
+    
+
+
     await test.step('click on Places button', async() =>{ 
         await EventData.validate_Make_hidden_is_visible()
+        await EventData.Click_Make_hidden_btn()
         await page.waitForTimeout(3000)
     })
-    await test.step('click on Places button', async() =>{ 
-        await EventData.Click_action_btn_1()
+    // await test.step('click on Places button', async() =>{ 
+    //     await EventData.Click_action_btn_1()
+    // })
+    // await test.step('click on Places button', async() =>{
+    //     await EventData.Click_action_btn_1() 
+    //     await EventData.Click_Make_hidden_btn()
+    // })
+
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.input_on_Search_field('just for test')
     })
-    await test.step('click on Places button', async() =>{ 
-        await EventData.Click_Make_hidden_btn()
-    })
+
+    
     await test.step('click on Places button', async() =>{ 
         await EventData.validate_hidden()
     })
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.input_on_Search_field('just for test')
+    })
     await test.step('click on Places button', async() =>{ 
-        await EventData.Click_action_btn_1()
+        await EventData.Click_action_btn_for_FAQs()
         await page.waitForTimeout(3000)
 
     })
@@ -7549,55 +7524,101 @@ test("Aloompa-MobileApp-TC-0140_Event_Data_FAQ_013 |validate action button and i
         await page.waitForTimeout(3000)
     })
     await test.step('click on Places button', async() =>{ 
-        await EventData.Click_action_btn_1()
+        await EventData.Click_action_btn_for_FAQs()
     })
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.input_on_Search_field('just for test')
+    })
+
     await test.step('click on Places button', async() =>{ 
-        await EventData.Click_Make_Visible_btn()
+        await EventData.Click_action_btn_for_FAQs()
+        await EventData.Click_Make_Visible_btn_common()
         await page.waitForTimeout(3000)
     })
+
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.input_on_Search_field('just for test')
+    })
+
+
+
+
+
+
     await test.step('click on Places button', async() =>{ 
-        await EventData.Click_action_btn_1()
+        await EventData.Click_action_btn_for_FAQs()
     })
     await test.step('click on Places button', async() =>{ 
         await page.waitForTimeout(3000)
         await EventData.validate_Edit_details_is_visible()
-        await page.waitForTimeout(3000)
+        
     })
+
     await test.step('click on Places button', async() =>{ 
-        await EventData.Click_action_btn_1()
-        await page.waitForTimeout(1000)
+        await EventData.check_selected_FAQs()
     })
+
     await test.step('click on Places button', async() =>{ 
+        await EventData.Click_action_btn_for_FAQs()
+    })
+
+
+    
+   
+    await test.step('click on Places button', async() =>{ 
+        
         await EventData.Click_Edit_details()
     })
+
+
     await test.step('click on import csv button ', async() =>{ 
-        await EventData.Athletes_Description('Stage Description')
+        await EventData.FAQs_Answer('faq ans')
     })
     await test.step('click on import csv button ', async() =>{ 
-        await EventData.Athletes_Custom_Preview_Text()
+        await EventData.FAQs_Questions("faqs question")
+    })
+
+    
+
+    await test.step('click on Places button', async() =>{ 
+        await EventData.Click_Save_FAQs()
+    })
+
+    
+
+    await test.step('click on Places button', async() =>{ 
+        await EventData.Click_return_to_all_XYZ_Common("Return to All FAQ")
+    })
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.input_on_Search_field('just for test')
     })
 
     await test.step('click on Places button', async() =>{ 
-        await EventData.Click_Save_Athletes()
-    })
-
-    await test.step('click on Places button', async() =>{ 
-        await EventData.Click_return_to_all_Athletes()
-    })
-
-    await test.step('click on Places button', async() =>{ 
-        await EventData.Click_action_btn_1()
+        await EventData.Click_action_btn_for_FAQs()
+        await page.waitForTimeout(1000)
     })
   
+    
+
     await test.step('click on Places button', async() =>{ 
-        await EventData.validate_Delete_Athlete_is_visible()
+        await EventData.validate_Delete_FAQs_is_visible()
+       
+    })
+    await test.step('click on Places button', async() =>{ 
+        await EventData.check_selected_FAQs()
     })
 
 
     await test.step('click on Places button', async() =>{
-        await EventData.Click_action_btn_1() 
-        await page.waitForTimeout(1000)
-        await EventData.Click_Delete_Athlete()
+        await EventData.Click_action_btn_for_FAQs() 
+        
+       
+    })
+
+    await test.step('click on Places button', async() =>{
+        
+        
+        await EventData.Click_Delete_FAQs()
     })
 
 
@@ -7621,7 +7642,7 @@ test("Aloompa-MobileApp-TC-0141_Event_Data_FAQ_014 |validate make visible and Hi
         await EventData.click_EventData()
     })
     await test.step('click on Places button', async() =>{ 
-        await EventData.click_Athletes()
+        await EventData.click_FAQs()
     })
     
     await test.step('click on Places button', async() =>{ 
@@ -7689,26 +7710,44 @@ test("Aloompa-MobileApp-TC-0142_Event_Data_FAQ_015 |validate Delete from bottom 
         await EventData.click_EventData()
     })
     await test.step('click on Places button', async() =>{ 
-        await EventData.click_Athletes()
+        await EventData.click_FAQs()
     })
     await test.step('click on import csv button ', async() =>{ 
-        await EventData.Click_New_Athletes()
+        await EventData.Click_New_FAQs()
     })
     await test.step('click on import csv button ', async() =>{ 
-        await EventData.Athletes_Name('001 Delete it')
+        await EventData.FAQs_Name('001 Delete it')
     })
     await test.step('click on import csv button ', async() =>{ 
-        await EventData.Click_Save_Athletes()
+        await EventData.FAQs_Questions('001 Delete it')
+    })
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.FAQs_Answer('001 Delete it')
+    })
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.Select_A_Category()
+    })
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.Click_Save_FAQs()
+        await page.waitForTimeout(2000)
     })
     await test.step('click on EventData button', async() =>{ 
         await EventData.click_EventData()
+        await page.waitForTimeout(2000)
     })
     await test.step('click on Places button', async() =>{ 
-        await EventData.click_Athletes()
+        await EventData.click_FAQs()
     })
 
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.input_on_Search_field('001 Delete it')
+    })
+
+
+
+
     await test.step('click on Places button', async() =>{ 
-        await EventData.Select_checkBox_for_delete()
+        await EventData.Select_checkBox()
     })
 
     await test.step('click on Places button', async() =>{ 
@@ -7720,6 +7759,7 @@ test("Aloompa-MobileApp-TC-0142_Event_Data_FAQ_015 |validate Delete from bottom 
     })
     await test.step('click on Places button', async() =>{ 
         await EventData.Click_apply_to_selected()
+        await page.waitForTimeout(2000)
     })
     
 
@@ -7736,7 +7776,7 @@ test("Aloompa-MobileApp-TC-0143_Event_Data_FAQ_016 |validate next And Previous b
         await EventData.click_EventData()
     })
     await test.step('click on Places button', async() =>{ 
-        await EventData.click_Performers()
+        await EventData.click_FAQs()
     })
     await test.step('click on Places button', async() =>{ 
         await EventData.click_Next_button()
@@ -7748,7 +7788,7 @@ test("Aloompa-MobileApp-TC-0143_Event_Data_FAQ_016 |validate next And Previous b
 
     
     await test.step('click on Places button', async() =>{ 
-        await EventData.Validate_next_btn_is_working_for_Athlete()
+        await EventData.Validate_next_btn_is_working_for_FAQs()
     })
 
 
@@ -7761,7 +7801,7 @@ test("Aloompa-MobileApp-TC-0143_Event_Data_FAQ_016 |validate next And Previous b
 
 
     await test.step('click on Places button', async() =>{ 
-        await EventData.Validate_Previous_btn_is_working_for_Athlete()
+        await EventData.Validate_Previous_btn_is_working_for_FAQs()
     })
     
     
@@ -7772,8 +7812,1361 @@ test("Aloompa-MobileApp-TC-0143_Event_Data_FAQ_016 |validate next And Previous b
 
     
 
+                    ////////////////////////////////////////////////////////////////////////////////////////
+
+                    //----------------------------------- FORMS -----------------------------------------//
+
+                    //////////////////////////////////////////////////////////////////////////////////////
+
+test("Aloompa-MobileApp-TC-0144_Event_Data_FORMS_001 | Create new Form and Validate all text input fields in New Forms from Forms  ", async ({ EventData,page, AppsPage }) => {
+
+    await test.step('Navigate to apps directory', async() =>{ 
+        await page.goto('#/apps/b19541b3-6e40-4442-a5d9-c3c8bcfc6325/3d27b311-49c1-4173-8168-c1381dbf97b7',{waitUntil:"domcontentloaded"})
+        
+    })
+
+    await test.step('click on EventData button', async() =>{ 
+        await EventData.click_EventData()
+    })
+    
+    await test.step('click on Places button', async() =>{ 
+        await EventData.click_FORMS()
+    })
+    
+    
+    
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.ClickNewForms()
+    })
+
+    await test.step('click select file button', async() =>{ 
+        await EventData.FormsName('Created Forms Name 001 ')
+    })
+    await test.step('click select file button', async() =>{ 
+        await EventData.FormsHeaderTitle('Forms Header Title')
+    })
+
+    await test.step('click select file button', async() =>{ 
+        await EventData.FormsHeaderText('Form Header Text')
+    })
+
+    await test.step('click select file button', async() =>{ 
+        await EventData.FormsButtonName('Forms Button Name')
+    })
+
+    await test.step('click select file button', async() =>{ 
+        await EventData.FormSubmissionMessage('Forms Form Submission Message')
+    })
+    await test.step('click select file button', async() =>{ 
+        await EventData.SaveFormButton()
+    })
+
     
 })
+test("Aloompa-MobileApp-TC-0145_Event_Data_FORMS_002 | validate all Form Settings check box  ", async ({ EventData,page, AppsPage }) => {
+
+    await test.step('Navigate to apps directory', async() =>{ 
+        await page.goto('#/apps/b19541b3-6e40-4442-a5d9-c3c8bcfc6325/3d27b311-49c1-4173-8168-c1381dbf97b7',{waitUntil:"domcontentloaded"})
+        
+    })
+
+    await test.step('click on EventData button', async() =>{ 
+        await EventData.click_EventData()
+    })
+    await test.step('click on Places button', async() =>{ 
+        await EventData.click_FORMS()
+    })
+
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.input_on_Search_keyword_for_form('C')
+    })
+    
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.clickSearchedForm()
+    })
+
+    await test.step('click select file button', async() =>{ 
+        await EventData.FormsHeaderTitle('Forms Header Title')
+    })
+    
+    
+   
+    
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.check1stCheckBox()
+    })
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.check2ndCheckBox()
+    })
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.check3rdCheckBox()
+    })
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.check4thCheckBox()
+    })
+
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.SaveFormButton()
+    })   
+})
+test("Aloompa-MobileApp-TC-0146_Event_Data_FORMS_003 | Validate upload Header Background image  ", async ({ EventData,page, AppsPage }) => {
+
+    await test.step('Navigate to apps directory', async() =>{ 
+        await page.goto('#/apps/b19541b3-6e40-4442-a5d9-c3c8bcfc6325/3d27b311-49c1-4173-8168-c1381dbf97b7',{waitUntil:"domcontentloaded"})
+        
+    })
+
+    await test.step('click on EventData button', async() =>{ 
+        await EventData.click_EventData()
+    })
+    await test.step('click on Places button', async() =>{ 
+        await EventData.click_FORMS()
+    })
+
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.input_on_Search_keyword_for_form('C')
+    })
+    
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.clickSearchedForm()
+    })
+
+    await test.step('file_uploader_for_splash_page_logo_file', async() =>{ 
+        await EventData.file_uploader_for_image_file('banner.png')
+        await page.waitForTimeout(3000)   
+    })
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.Click_Remove_Image()
+    })
+
+   
+    
+    
+   
+    
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.check1stCheckBox()
+    })
+   
+
+
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.SaveFormButton()
+    })
+    
+})
+test("Aloompa-MobileApp-TC-0147_Event_Data_FORMS_004 | validate Header Background Color  ", async ({ EventData,page, AppsPage }) => {
+
+    await test.step('Navigate to apps directory', async() =>{ 
+        await page.goto('#/apps/b19541b3-6e40-4442-a5d9-c3c8bcfc6325/3d27b311-49c1-4173-8168-c1381dbf97b7',{waitUntil:"domcontentloaded"})
+        
+    })
+
+    await test.step('click on EventData button', async() =>{ 
+        await EventData.click_EventData()
+    })
+    await test.step('click on Places button', async() =>{ 
+        await EventData.click_FORMS()
+    })
+
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.input_on_Search_keyword_for_form('C')
+    })
+    
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.clickSearchedForm()
+    })
+
+    await test.step('fill_color_code ', async() =>{ 
+        await EventData.HeaderBackgroundColorFill("#999999");
+        await page.waitForTimeout(3000)
+        
+    })
+    
+
+
+    await test.step('fill_color_code ', async() =>{ 
+        await page.waitForTimeout(3000)
+        await EventData.HeaderBackgroundColorCode("rgb(153, 153, 153)");
+        await page.waitForTimeout(1000)
+        
+    })
+
+
+    
+})
+test("Aloompa-MobileApp-TC-0148_Event_Data_FORMS_005 | Validate all headers text input fields is visible in preview", async ({ EventData,page, AppsPage }) => {
+
+    await test.step('Navigate to apps directory', async() =>{ 
+        await page.goto('#/apps/b19541b3-6e40-4442-a5d9-c3c8bcfc6325/3d27b311-49c1-4173-8168-c1381dbf97b7',{waitUntil:"domcontentloaded"})
+        
+    })
+
+    await test.step('click on EventData button', async() =>{ 
+        await EventData.click_EventData()
+    })
+    await test.step('click on Places button', async() =>{ 
+        await EventData.click_FORMS()
+    })
+
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.input_on_Search_keyword_for_form('C')
+    })
+    
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.clickSearchedForm()
+    })
+    
+    await test.step('click select file button', async() =>{ 
+        await EventData.FormsHeaderTitle('Forms Header Title 1')
+    })
+
+    await test.step('click select file button', async() =>{ 
+        await EventData.FormsHeaderText('Form Header Text 2')
+    })
+
+    await test.step('click select file button', async() =>{ 
+        await EventData.FormsButtonName('Forms Button Name 3')
+    })
+
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.check1stCheckBox()
+    })
+
+    await test.step('click select file button', async() =>{ 
+        await EventData.ValidateFormsHeaderTitle('Forms Header Title 1')
+    })
+
+    await test.step('click select file button', async() =>{ 
+        await EventData.ValidateFormsHeaderText('Form Header Text 2')
+    })
+
+    await test.step('click select file button', async() =>{ 
+        await EventData.ValidateFormsButtonName('Forms Button Name 3')
+    })
+})
+test("Aloompa-MobileApp-TC-0149_Event_Data_FORMS_006 | Validate 'Include Sponsor Image' radio button and upload images ", async ({ EventData,page, AppsPage }) => {
+
+    await test.step('Navigate to apps directory', async() =>{ 
+        await page.goto('#/apps/b19541b3-6e40-4442-a5d9-c3c8bcfc6325/3d27b311-49c1-4173-8168-c1381dbf97b7',{waitUntil:"domcontentloaded"})
+        
+    })
+
+    await test.step('click on EventData button', async() =>{ 
+        await EventData.click_EventData()
+    })
+    await test.step('click on Places button', async() =>{ 
+        await EventData.click_FORMS()
+    })
+
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.input_on_Search_keyword_for_form('C')
+    })
+    
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.clickSearchedForm()
+    })
+
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.checkIncludeSponsorImageRadioBtn()
+    })
+    await test.step('file_uploader_for_splash_page_logo_file', async() =>{ 
+        await EventData.file_uploader_for_image_file('banner.png')
+        await page.waitForTimeout(3000)   
+    })
+
+    await test.step('file_uploader_for_splash_page_logo_file', async() =>{ 
+        await EventData.file_uploader_for_image_file_include_sponsor_image('banner.png')
+        await page.waitForTimeout(3000)   
+    })
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.Click_Remove_Image()
+    })
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.Click_Remove_Image()
+    })
+  
+})
+test("Aloompa-MobileApp-TC-0150_Event_Data_FORMS_007 | Validate Create a new deep link and select created Sponsor Link and remove link ", async ({ EventData,page, AppsPage }) => {
+
+    await test.step('Navigate to apps directory', async() =>{ 
+        await page.goto('#/apps/b19541b3-6e40-4442-a5d9-c3c8bcfc6325/3d27b311-49c1-4173-8168-c1381dbf97b7',{waitUntil:"domcontentloaded"})
+        
+    })
+    
+    await test.step('click on EventData button', async() =>{ 
+        await EventData.click_EventData()
+    })
+    await test.step('click on Places button', async() =>{ 
+        await EventData.click_FORMS()
+    })
+
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.input_on_Search_keyword_for_form('C')
+    })
+    
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.clickSearchedForm()
+    })
+
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.checkIncludeSponsorImageRadioBtn()
+    })
+
+    
+
+
+
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.Click_Create_New_Deeplink()
+    })
+
+
+
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.Click_Select_a_type()
+    })
+
+
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.select_native_webview()
+    })
+
+
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.fill_deeplink_title()
+    })
+
+
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.fill_deeplink_URL()
+    })
+
+
+   
+
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.Check_Use_Device_Id("5")
+    })
+
+
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.Click_Save_Deeplink()
+    })
+
+
+
+    await test.step('Select_deep_link_Edit_and_Remove', async() =>{ 
+      
+        await EventData.Select_deep_link_Edit()
+        await EventData.Delete_created_deep_link()
+        await EventData.Delete_created_deep_link()
+    })
+    
+
+    
+})
+test("Aloompa-MobileApp-TC-0151_Event_Data_FORMS_008 | validate  Add new field and select type `checkbox` and its all fields  ", async ({ EventData,page, AppsPage }) => {
+
+    await test.step('Navigate to apps directory', async() =>{ 
+        await page.goto('#/apps/b19541b3-6e40-4442-a5d9-c3c8bcfc6325/3d27b311-49c1-4173-8168-c1381dbf97b7',{waitUntil:"domcontentloaded"})
+        
+    })
+    
+    await test.step('click on EventData button', async() =>{ 
+        await EventData.click_EventData()
+    })
+    await test.step('click on Places button', async() =>{ 
+        await EventData.click_FORMS()
+    })
+
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.input_on_Search_keyword_for_form('C')
+    })
+    
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.clickSearchedForm()
+    })
+
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.clickAddNewField()
+    })
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.selectFieldTypeAsCheckBox()
+    })
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.Click_Create_New_Deeplink()
+    })
+    
+
+
+
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.Click_Select_a_type()
+    })
+
+
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.select_native_webview()
+    })
+
+
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.fill_deeplink_title()
+    })
+
+
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.fill_deeplink_URL()
+    })
+
+
+   
+
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.Check_Use_Device_Id("5")
+    })
+
+
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.Click_Save_Deeplink()
+        await page.waitForTimeout(4000)
+    })
+
+
+
+
+    
+    //Deeplink create ,edit,remove,cencle,delete//
+
+   
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.ClickPleaseSelectDeepLinkBtn()
+    })
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.Select_deep_link_for_form()
+    })
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.Select_deep_link_Edit_for_form()
+        await page.waitForTimeout(3000)
+    })
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.Select_deep_link_Edit_and_cancle()
+        await page.waitForTimeout(3000)
+    })
+   
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.Select_deep_link__and_Remove()
+        await page.waitForTimeout(3000)
+    })
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.ClickPleaseSelectDeepLinkBtn()
+    })
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.Select_deep_link_for_form()
+    })
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.Select_deep_link_Edit_for_form()
+        await page.waitForTimeout(3000)
+    })
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.Delete_created_deep_link()
+        await page.waitForTimeout(3000)
+    })
+
+    //Deeplink create ,edit,remove,cencle,delete//
+    //
+    
+
+
+    //7/3/2024
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.writeSomethingOnDescription('C')
+    })
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.validateCheckUncheck()
+    })
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.clickAdvancedSettingsAndSelectAddConditionsAndRemove()
+    })
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.validateCopy ()
+    })
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.validateDelete()
+    })
+    
+
+    
+})
+test("Aloompa-MobileApp-TC-0152_Event_Data_FORMS_009 | Validate Field Type `Date selector` and all its feature  ", async ({ EventData,page, AppsPage }) => {
+
+    await test.step('Navigate to apps directory', async() =>{ 
+        await page.goto('#/apps/b19541b3-6e40-4442-a5d9-c3c8bcfc6325/3d27b311-49c1-4173-8168-c1381dbf97b7',{waitUntil:"domcontentloaded"})
+        
+    })
+    
+    await test.step('click on EventData button', async() =>{ 
+        await EventData.click_EventData()
+    })
+    await test.step('click on Places button', async() =>{ 
+        await EventData.click_FORMS()
+    })
+
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.input_on_Search_keyword_for_form('C')
+    })
+    
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.clickSearchedForm()
+    })
+
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.clickAddNewField()
+    })
+    
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.selectFieldType("Date Selector")
+    })
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.TypeFieldName("Date Selector")
+    })
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.typeHint("Date Selector")
+    })
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.selectDateFormate("EEE, MMM d")
+    })
+    
+    
+
+    
+})
+test("Aloompa-MobileApp-TC-0153_Event_Data_FORMS_010 | Validate Field Type `Divider` and all its feature  ", async ({ EventData,page, AppsPage }) => {
+
+    await test.step('Navigate to apps directory', async() =>{ 
+        await page.goto('#/apps/b19541b3-6e40-4442-a5d9-c3c8bcfc6325/3d27b311-49c1-4173-8168-c1381dbf97b7',{waitUntil:"domcontentloaded"})
+        
+    })
+    
+    await test.step('click on EventData button', async() =>{ 
+        await EventData.click_EventData()
+    })
+    await test.step('click on Places button', async() =>{ 
+        await EventData.click_FORMS()
+    })
+
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.input_on_Search_keyword_for_form('C')
+    })
+    
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.clickSearchedForm()
+    })
+
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.clickAddNewField()
+    })
+    
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.selectFieldType("Divider")
+    })
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.DividerText("DividerText")
+    })
+    
+
+    
+})
+test("Aloompa-MobileApp-TC-0154_Event_Data_FORMS_011 | Validate Field Type `Drop-down` and all its feature  ", async ({ EventData,page, AppsPage }) => {
+
+    await test.step('Navigate to apps directory', async() =>{ 
+        await page.goto('#/apps/b19541b3-6e40-4442-a5d9-c3c8bcfc6325/3d27b311-49c1-4173-8168-c1381dbf97b7',{waitUntil:"domcontentloaded"})
+        
+    })
+    
+    await test.step('click on EventData button', async() =>{ 
+        await EventData.click_EventData()
+    })
+    await test.step('click on Places button', async() =>{ 
+        await EventData.click_FORMS()
+    })
+
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.input_on_Search_keyword_for_form('C')
+    })
+    
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.clickSearchedForm()
+    })
+
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.clickAddNewField()
+    })
+    
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.selectFieldType("Drop-down")
+    })
+
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.DropDownQuestion("DropDownQuestion")
+    })
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.DropDownQuestionHint("DropDownQuestionHint")
+    })
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.ClickDropDownQuestionHintAddOption()
+    })
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.TypeDropDownQuestionHintOption("DropDownQuestionHintOption")
+    })
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.TypeDropDownQuestionHintOptionClose()
+    })
+    
+
+    
+})
+test("Aloompa-MobileApp-TC-0155_Event_Data_FORMS_012 | Validate Field Type `Email` and all its feature  ", async ({ EventData,page, AppsPage }) => {
+
+    await test.step('Navigate to apps directory', async() =>{ 
+        await page.goto('#/apps/b19541b3-6e40-4442-a5d9-c3c8bcfc6325/3d27b311-49c1-4173-8168-c1381dbf97b7',{waitUntil:"domcontentloaded"})
+        
+    })
+    
+    await test.step('click on EventData button', async() =>{ 
+        await EventData.click_EventData()
+    })
+    await test.step('click on Places button', async() =>{ 
+        await EventData.click_FORMS()
+    })
+
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.input_on_Search_keyword_for_form('C')
+    })
+    
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.clickSearchedForm()
+    })
+
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.clickAddNewField()
+    })
+    
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.selectFieldType("Email")
+    })
+
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.TypeEmailLebel("EmailLebel")
+    })
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.EmailHint("EmailHint")
+    })
+    
+    
+
+    
+})
+test("Aloompa-MobileApp-TC-0156_Event_Data_FORMS_013 | Validate Field Type `Multiple Choice` and all its feature  ", async ({ EventData,page, AppsPage }) => {
+
+    await test.step('Navigate to apps directory', async() =>{ 
+        await page.goto('#/apps/b19541b3-6e40-4442-a5d9-c3c8bcfc6325/3d27b311-49c1-4173-8168-c1381dbf97b7',{waitUntil:"domcontentloaded"})
+        
+    })
+
+    await test.step('click on EventData button', async() =>{ 
+        await EventData.click_EventData()
+    })
+    await test.step('click on Places button', async() =>{ 
+        await EventData.click_FORMS()
+    })
+
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.input_on_Search_keyword_for_form('C')
+    })
+    
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.clickSearchedForm()
+    })
+
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.clickAddNewField()
+    })
+    
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.selectFieldType("Multiple Choice")
+    })
+
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.MultipleChoiceQuestion("MultipleChoiceQuestion")
+    })
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.MultipleChoiceQuestionOption("MultipleChoiceQuestionOption")
+    })
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.ClickMultipleChoiceQuestionOptionAddBtn()
+    })
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.TypeOnMultipleChoiceQuestionOptionAddedOption("Option 1")
+    })
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.SetDefaultOptionAsOption1()
+    })
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.MultipleChoiceQuestionOptionAddedOptionRemove()
+    })
+    
+    
+    
+
+    
+})
+test("Aloompa-MobileApp-TC-0157_Event_Data_FORMS_014 | Validate Field Type `Number Input` and all its feature  ", async ({ EventData,page, AppsPage }) => {
+
+    await test.step('Navigate to apps directory', async() =>{ 
+        await page.goto('#/apps/b19541b3-6e40-4442-a5d9-c3c8bcfc6325/3d27b311-49c1-4173-8168-c1381dbf97b7',{waitUntil:"domcontentloaded"})
+        
+    })
+    
+    await test.step('click on EventData button', async() =>{ 
+        await EventData.click_EventData()
+    })
+    await test.step('click on Places button', async() =>{ 
+        await EventData.click_FORMS()
+    })
+
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.input_on_Search_keyword_for_form('C')
+    })
+    
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.clickSearchedForm()
+    })
+
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.clickAddNewField()
+    })
+    
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.selectFieldType("Number Input")
+    })
+
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.numberInputQuestion("Number Input Question")
+    })
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.numberInputQuestionHint("Number Input Question Hint")
+    })
+    
+    
+
+    
+})
+test("Aloompa-MobileApp-TC-0158_Event_Data_FORMS_015 | Validate Field Type `Phone number` and all its feature  ", async ({ EventData,page, AppsPage }) => {
+
+    await test.step('Navigate to apps directory', async() =>{ 
+        await page.goto('#/apps/b19541b3-6e40-4442-a5d9-c3c8bcfc6325/3d27b311-49c1-4173-8168-c1381dbf97b7',{waitUntil:"domcontentloaded"})
+        
+    })
+    
+    await test.step('click on EventData button', async() =>{ 
+        await EventData.click_EventData()
+    })
+    await test.step('click on Places button', async() =>{ 
+        await EventData.click_FORMS()
+    })
+
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.input_on_Search_keyword_for_form('C')
+    })
+    
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.clickSearchedForm()
+    })
+
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.clickAddNewField()
+    })
+    
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.selectFieldType("Phone Number")
+    })
+
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.phoneNumberLable("Phone Number Lable")
+    })
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.phoneNumberLableHint("Phone Number Lable Hint")
+    })
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.ClickDefaultCountryCode()
+    })
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.setDefaultCountryCode()
+    })
+
+    
+
+    
+})
+test("Aloompa-MobileApp-TC-0159_Event_Data_FORMS_016 | Validate Field Type `Short answer` and all its feature  ", async ({ EventData,page, AppsPage }) => {
+
+    await test.step('Navigate to apps directory', async() =>{ 
+        await page.goto('#/apps/b19541b3-6e40-4442-a5d9-c3c8bcfc6325/3d27b311-49c1-4173-8168-c1381dbf97b7',{waitUntil:"domcontentloaded"})
+        
+    })
+    
+    await test.step('click on EventData button', async() =>{ 
+        await EventData.click_EventData()
+    })
+    await test.step('click on Places button', async() =>{ 
+        await EventData.click_FORMS()
+    })
+
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.input_on_Search_keyword_for_form('C')
+    })
+    
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.clickSearchedForm()
+    })
+
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.clickAddNewField()
+    })
+    
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.selectFieldType("Short Answer")
+    })
+
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.ShortAnswerQuestion("Short Answer Question")
+    })
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.ShortAnswerQuestionHint("Short Answer Question Hint")
+    })
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.numberInputQuestionHint("Number Input Question Hint")
+    })
+    
+
+    
+})
+test("Aloompa-MobileApp-TC-0160_Event_Data_FORMS_017 | Validate Field Type `Sponsor` and all its feature  ", async ({ EventData,page, AppsPage }) => {
+
+    await test.step('Navigate to apps directory', async() =>{ 
+        await page.goto('#/apps/b19541b3-6e40-4442-a5d9-c3c8bcfc6325/3d27b311-49c1-4173-8168-c1381dbf97b7',{waitUntil:"domcontentloaded"})
+        
+    })
+
+    await test.step('click on EventData button', async() =>{ 
+        await EventData.click_EventData()
+    })
+    await test.step('click on Places button', async() =>{ 
+        await EventData.click_FORMS()
+    })
+
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.input_on_Search_keyword_for_form('C')
+    })
+    
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.clickSearchedForm()
+    })
+
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.clickAddNewField()
+    })
+    
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.selectFieldType("Sponsor")
+    })
+
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.TypeBannerName("Banner Name")
+    })
+
+
+
+
+
+
+
+    
+    
+    
+
+     //Deeplink create ,edit,remove,cencle,delete//
+
+   
+     await test.step('click on import csv button ', async() =>{ 
+        await EventData.Click_Create_New_Deeplink()
+    })
+
+
+
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.Click_Select_a_type()
+    })
+
+
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.select_native_webview()
+    })
+
+
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.fill_deeplink_title()
+    })
+
+
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.fill_deeplink_URL()
+    })
+
+
+   
+
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.Check_Use_Device_Id("5")
+    })
+
+
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.Click_Save_Deeplink()
+    })
+
+
+
+    await test.step('Select_deep_link_Edit_and_Remove', async() =>{ 
+      
+        await EventData.Select_deep_link_Edit()
+        await EventData.Delete_created_deep_link()
+        await EventData.Delete_created_deep_link()
+    })
+
+    //Deeplink create ,edit,remove,cencle,delete//
+    //
+
+    await test.step('file_uploader_for_splash_page_logo_file', async() =>{ 
+        await EventData.file_uploader_for_image_file('banner.png')
+        await page.waitForTimeout(3000)   
+    })
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.Click_Remove_Image()
+    })
+    
+
+    
+})
+test("Aloompa-MobileApp-TC-0161_Event_Data_FORMS_018 | Validate Field Type `Text box` and all its feature  ", async ({ EventData,page, AppsPage }) => {
+
+    await test.step('Navigate to apps directory', async() =>{ 
+        await page.goto('#/apps/b19541b3-6e40-4442-a5d9-c3c8bcfc6325/3d27b311-49c1-4173-8168-c1381dbf97b7',{waitUntil:"domcontentloaded"})
+        
+    })
+
+    await test.step('click on EventData button', async() =>{ 
+        await EventData.click_EventData()
+    })
+    await test.step('click on Places button', async() =>{ 
+        await EventData.click_FORMS()
+    })
+
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.input_on_Search_keyword_for_form('C')
+    })
+    
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.clickSearchedForm()
+    })
+
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.clickAddNewField()
+    })
+    
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.selectFieldType("Text Box")
+    })
+
+
+     //Deeplink create ,edit,remove,cencle,delete//
+
+   
+     await test.step('click on import csv button ', async() =>{ 
+        await EventData.Click_Create_New_Deeplink()
+    })
+
+
+
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.Click_Select_a_type()
+    })
+
+
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.select_native_webview()
+    })
+
+
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.fill_deeplink_title()
+    })
+
+
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.fill_deeplink_URL()
+    })
+
+
+   
+
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.Check_Use_Device_Id("5")
+    })
+
+
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.Click_Save_Deeplink()
+    })
+
+
+
+    await test.step('Select_deep_link_Edit_and_Remove', async() =>{ 
+      
+        await EventData.Select_deep_link_Edit()
+        await EventData.Delete_created_deep_link()
+        await EventData.Delete_created_deep_link()
+    })
+
+    //Deeplink create ,edit,remove,cencle,delete//
+    //
+    
+
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.writeSomethingOnTextBox('Text Box')
+    })
+    
+
+
+
+    
+    
+    
+    
+
+    
+})
+test("Aloompa-MobileApp-TC-0162_Event_Data_FORMS_019 | Validate Field Type `Toggle` and all its feature  ", async ({ EventData,page, AppsPage }) => {
+
+    await test.step('Navigate to apps directory', async() =>{ 
+        await page.goto('#/apps/b19541b3-6e40-4442-a5d9-c3c8bcfc6325/3d27b311-49c1-4173-8168-c1381dbf97b7',{waitUntil:"domcontentloaded"})
+        
+    })
+    
+    await test.step('click on EventData button', async() =>{ 
+        await EventData.click_EventData()
+    })
+    await test.step('click on Places button', async() =>{ 
+        await EventData.click_FORMS()
+    })
+
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.input_on_Search_keyword_for_form('C')
+    })
+    
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.clickSearchedForm()
+    })
+
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.clickAddNewField()
+    })
+    
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.selectFieldType("Toggle")
+    })
+
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.ToggleTitle("Toggle Title")
+    })
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.toggleDescription("Toggle Description")
+    })
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.togglevalidation()
+    })
+    
+    
+
+    
+})
+
+
+
+test.skip("Aloompa-MobileApp-TC-0163_Event_Data_FORMS_020 | validate Sorting  ", async ({ EventData,page, AppsPage }) => {
+
+    await test.step('Navigate to apps directory', async() =>{ 
+        await page.goto('#/apps/b19541b3-6e40-4442-a5d9-c3c8bcfc6325/3d27b311-49c1-4173-8168-c1381dbf97b7',{waitUntil:"domcontentloaded"})
+        
+    })
+    
+    await test.step('click on EventData button', async() =>{ 
+        await EventData.click_EventData()
+    })
+    await test.step('click on Places button', async() =>{ 
+        await EventData.click_Places()
+    })
+    // await test.step('click on Places button', async() =>{ 
+    //     await EventData.click_Name_sorting()
+    // })
+    await test.step('click on Places button', async() =>{
+        await page.waitForTimeout(5000) 
+        await EventData.Validate_Name_sorting()
+    })
+    
+    
+    
+
+    
+    
+
+    
+})
+
+
+test("Aloompa-MobileApp-TC-0164_Event_Data_FORMS_021 |validate action button and its features  ", async ({ EventData,page, AppsPage }) => {
+
+    await test.step('Navigate to apps directory', async() =>{ 
+        await page.goto('#/apps/b19541b3-6e40-4442-a5d9-c3c8bcfc6325/3d27b311-49c1-4173-8168-c1381dbf97b7',{waitUntil:"domcontentloaded"})
+        
+    })
+    
+    await test.step('click on EventData button', async() =>{ 
+        await EventData.click_EventData()
+    })
+    await test.step('click on Places button', async() =>{ 
+        await EventData.click_FORMS()
+    })
+
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.input_on_Search_keyword_for_form('C')
+    })
+    
+    await test.step('click on Places button', async() =>{ 
+        await EventData.validate_Action_btn_is_visible()
+    })
+    await test.step('click on Places button', async() =>{ 
+        await EventData.Click_action_btn()
+    })
+    
+
+
+    await test.step('click on Places button', async() =>{ 
+        await EventData.validate_Make_hidden_is_visible()
+        await EventData.Click_Make_hidden_btn()
+        await page.waitForTimeout(3000)
+    })
+    // await test.step('click on Places button', async() =>{ 
+    //     await EventData.Click_action_btn_1()
+    // })
+    // await test.step('click on Places button', async() =>{
+    //     await EventData.Click_action_btn_1() 
+    //     await EventData.Click_Make_hidden_btn()
+    // })
+
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.input_on_Search_keyword_for_form('C')
+    })
+
+    
+    await test.step('click on Places button', async() =>{ 
+        await EventData.validate_hidden()
+    })
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.input_on_Search_keyword_for_form('C')
+    })
+
+    await test.step('click on Places button', async() =>{ 
+        await EventData.Click_action_btn()
+        await page.waitForTimeout(3000)
+
+    })
+
+    await test.step('click on Places button', async() =>{ 
+        await page.waitForTimeout(3000)
+        await EventData.validate_Make_visible_is_visible()
+        await page.waitForTimeout(3000)
+    })
+
+    await test.step('click on Places button', async() =>{ 
+        await EventData.Click_action_btn()
+    })
+
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.input_on_Search_keyword_for_form('C')
+    })
+
+
+    await test.step('click on Places button', async() =>{ 
+        await EventData.Click_action_btn()
+        await EventData.Click_Make_Visible_btn_common()
+        await page.waitForTimeout(3000)
+    })
+
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.input_on_Search_keyword_for_form('C')
+    })
+
+
+
+
+
+
+    await test.step('click on Places button', async() =>{ 
+        await EventData.Click_action_btn()
+    })
+    await test.step('click on Places button', async() =>{ 
+        await page.waitForTimeout(3000)
+        await EventData.validate_Edit_details_is_visible()
+        
+    })
+
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.input_on_Search_keyword_for_form('C')
+    })
+
+    
+
+    await test.step('click on Places button', async() =>{ 
+        await EventData.Click_action_btn()
+    })
+
+
+    
+   
+    await test.step('click on Places button', async() =>{ 
+        
+        await EventData.Click_Edit_details()
+    })
+
+
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.check1stCheckBox()
+    })
+
+    
+
+    await test.step('click on Places button', async() =>{ 
+        await EventData.SaveFormButton()
+    })
+
+    
+
+    await test.step('click on Places button', async() =>{ 
+        await EventData.Click_return_to_all_XYZ_Common("Return to All Forms")
+    })
+
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.input_on_Search_keyword_for_form('C')
+    })
+
+    await test.step('click on Places button', async() =>{ 
+        await EventData.Click_action_btn()
+        await page.waitForTimeout(3000)
+    })
+  
+    
+
+    await test.step('click on Places button', async() =>{ 
+        await EventData.validate_Delete_is_visible_from_action_btn_common("Delete Form")
+       //-----
+    })
+
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.input_on_Search_keyword_for_form('C')
+    })
+    
+
+
+    await test.step('click on Places button', async() =>{
+        await EventData.Click_action_btn() 
+        await page.waitForTimeout(3000)
+        
+       
+    })
+
+   
+    await test.step('click on Places button', async() =>{
+        await EventData.Click_Delete_From_Action_btn_common("Delete Form")
+       
+    })
+
+
+    await test.step('click on Places button', async() =>{ 
+        await EventData.Validate_Yes_btn()
+        await page.waitForTimeout(4000)
+        
+    })
+
+
+
+    
+})
+
+test("Aloompa-MobileApp-TC-0165_Event_Data_FORMS_022 |validate next And Previous button ", async ({ EventData,page, AppsPage }) => {
+
+    await test.step('Navigate to apps directory', async() =>{ 
+        await page.goto('#/apps/b19541b3-6e40-4442-a5d9-c3c8bcfc6325/3d27b311-49c1-4173-8168-c1381dbf97b7',{waitUntil:"domcontentloaded"})
+        
+    })
+    
+    await test.step('click on EventData button', async() =>{ 
+        await EventData.click_EventData()
+    })
+    await test.step('click on Places button', async() =>{ 
+        await EventData.click_FORMS()
+    })
+    await test.step('click on Places button', async() =>{ 
+        await EventData.click_Next_button()
+    })
+    
+    
+
+    
+
+    
+    
+
+    await test.step('click on Places button', async() =>{ 
+        await EventData.Validate_next_btn_is_working_common()
+    })
+
+
+
+    await test.step('click on Places button', async() =>{ 
+        await EventData.click_Previous_button()
+    })
+    
+    
+
+
+    
+    await test.step('click on Places button', async() =>{ 
+        await EventData.Validate_Previous_btn_is_working_common()
+    })
+    
+
+    
+})
+
+
+    
+})
+
+
+//09/07/2024
 
 
 
