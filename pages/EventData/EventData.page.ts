@@ -542,6 +542,7 @@ toggleDescription:"//div[text()='Description']//parent::label/following-sibling:
 toggleradioBtn1:"//div[text()='Default Value']//parent::label/following-sibling::div//div/label/span/span/input",
 toggleradioBtn2:"//div[text()='Default Value']//parent::label/following-sibling::div//div/label/following-sibling::label/span/span/input",
 toggleValidationFromPreview:"//span[@class='MuiIconButton-label']//input[1]",
+Click_action_btn_for_form:"(//p[text()='Created Forms Name 001 '])[1]/parent::a/parent::td/following-sibling::td[2]//button",
 
 
 
@@ -2129,6 +2130,20 @@ toggleValidationFromPreview:"//span[@class='MuiIconButton-label']//input[1]",
 
     try {
       await ele.isVisible()
+
+    } catch (error) {
+      throw new Error('Aloompa | admin | Event Data | Places | "" |  Error occured: ' + error)
+    }
+  }
+   // Module Name: Aloompa | Admin | Mobile App CMS
+  // Feature Name: Aloompa Mobile App CMS - Event Data
+  // Screen Type: Desktop
+  // Description:
+  async click_Yes_btn() {
+    const ele = this.page.locator(this.Event_Data_Elements.Click_Yes_btn)
+
+    try {
+      await ele.click()
 
     } catch (error) {
       throw new Error('Aloompa | admin | Event Data | Places | "" |  Error occured: ' + error)
@@ -7841,6 +7856,19 @@ toggleValidationFromPreview:"//span[@class='MuiIconButton-label']//input[1]",
 
       
       
+    } catch (error) {
+      throw new Error('Aloompa | admin | Event Data | Places | "" |  Error occured: ' + error)
+    }
+  }
+
+    // Module Name: Aloompa | Admin | Mobile App CMS
+  // Feature Name: Aloompa Mobile App CMS - Event Data
+  // Screen Type: Desktop
+  // Description: 
+  async Click_action_btn_for_form() {
+    const ele = this.page.locator(this.Event_Data_Elements.Click_action_btn_for_form)
+    try {
+      await ele.click()
     } catch (error) {
       throw new Error('Aloompa | admin | Event Data | Places | "" |  Error occured: ' + error)
     }

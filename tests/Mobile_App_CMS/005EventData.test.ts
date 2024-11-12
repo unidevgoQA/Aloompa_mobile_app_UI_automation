@@ -6901,6 +6901,8 @@ test("Aloompa-MobileApp-TC-0126_Event_Data_FAQ_001 | Validate import csv is func
     await test.step('click on import csv button ', async() =>{ 
         await EventData.click_Import_CSV_Btn()
     })
+
+    
     
     await test.step('verify import csv text is visible ', async() =>{ 
         await EventData.check_import_CSV_text()
@@ -8902,9 +8904,6 @@ test("Aloompa-MobileApp-TC-0162_Event_Data_FORMS_019 | Validate Field Type `Togg
 
     
 })
-
-
-
 test.skip("Aloompa-MobileApp-TC-0163_Event_Data_FORMS_020 | validate Sorting  ", async ({ EventData,page, AppsPage }) => {
 
     await test.step('Navigate to apps directory', async() =>{ 
@@ -8934,8 +8933,6 @@ test.skip("Aloompa-MobileApp-TC-0163_Event_Data_FORMS_020 | validate Sorting  ",
 
     
 })
-
-
 test("Aloompa-MobileApp-TC-0164_Event_Data_FORMS_021 |validate action button and its features  ", async ({ EventData,page, AppsPage }) => {
 
     await test.step('Navigate to apps directory', async() =>{ 
@@ -9114,7 +9111,6 @@ test("Aloompa-MobileApp-TC-0164_Event_Data_FORMS_021 |validate action button and
 
     
 })
-
 test("Aloompa-MobileApp-TC-0165_Event_Data_FORMS_022 |validate next And Previous button ", async ({ EventData,page, AppsPage }) => {
 
     await test.step('Navigate to apps directory', async() =>{ 
@@ -9160,14 +9156,60 @@ test("Aloompa-MobileApp-TC-0165_Event_Data_FORMS_022 |validate next And Previous
 
     
 })
+test("Aloompa-MobileApp-TC-0166_Event_Data_FORMS_023 |validate delete from action btn ", async ({ EventData,page, AppsPage }) => {
+
+    await test.step('Navigate to apps directory', async() =>{ 
+        await page.goto('#/apps/b19541b3-6e40-4442-a5d9-c3c8bcfc6325/3d27b311-49c1-4173-8168-c1381dbf97b7',{waitUntil:"domcontentloaded"})
+        
+    })
+    
+    await test.step('click on EventData button', async() =>{ 
+        await EventData.click_EventData()
+    })
+    await test.step('click on Places button', async() =>{ 
+        await EventData.click_FORMS()
+    })
+
+    await test.step('click on import csv button ', async() =>{ 
+        await EventData.input_on_Search_keyword_for_form('Created Forms Name 001')
+        await page.waitForTimeout(1000)
+    })
+    
+    
+    
+
+    await test.step('click on Places button', async() =>{
+        await EventData.Click_action_btn_for_form() 
+        await page.waitForTimeout(3000)
+        
+       
+    })
+
+   
+    await test.step('click on Places button', async() =>{
+        await EventData.Click_Delete_From_Action_btn_common("Delete Form")
+       
+    })
+
+
+    await test.step('click on Places button', async() =>{ 
+        await EventData.Validate_Yes_btn()
+        await EventData.click_Yes_btn()
+        await page.waitForTimeout(4000)
+        
+    })
+
 
 
     
 })
 
 
-//09/07/2024
+    
+})
 
+
+//12/11/2024-arif
 
 
 
